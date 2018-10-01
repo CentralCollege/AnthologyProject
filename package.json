@@ -1,0 +1,26 @@
+{
+  "name": "wpt-alumni",
+  "description": "WordPress template for the alumni section of the Central Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CentralCollege/wpt-financial-aid"
+  },
+  "scripts": {
+    "start": "grunt",
+    "test": "axe 192.168.56.111/alumni --exit"
+  },
+  "version": "0.0.1",
+  "devDependencies": {
+    "axe-cli": "^1.3.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "imagemin-mozjpeg": "^6.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

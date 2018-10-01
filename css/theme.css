@@ -1,0 +1,388 @@
+/* -----------------------------------------------------------*/
+/* Global settings */
+/* -----------------------------------------------------------*/
+body{
+  width: 100%;
+  height: 100%;
+}
+p{
+  margin: 1.25em 0;
+  line-height: 1.25em;
+  font-family: 'Roboto', sans-serif;
+}
+.alignCenter{
+  text-align: center;
+}
+/* -----------------------------------------------------------*/
+/* Web Accessibility copy hiding */
+/* -----------------------------------------------------------*/
+.wahide{
+  display: none;
+}
+/* -----------------------------------------------------------*/
+/* Fonts */
+/* -----------------------------------------------------------*/
+html{
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+h1,h2,h3,h4,h5{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin: .75em 0;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+}
+/* -----------------------------------------------------------*/
+/* Desktop Navigation */
+/* -----------------------------------------------------------*/
+.desktopMenu{
+  display: none;
+}
+.mobileMenu{
+  display: block;
+}
+@media (min-width: 867px) {
+  .mobileMenu{
+    display: none;
+  }
+  .desktopMenu{
+    background-color: #333;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  .desktopMenu a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: .75em 1em;
+  }
+  .desktopMenu .menuButton{
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    margin: 0;
+    background-color: #333;
+    font-family: 'Lato', sans-serif;
+    padding: .75em 1em;
+  }
+  .desktopMenu .menuButton:hover{
+    background-color: #cb2026;
+  }
+  .desktopMenu a:hover{
+    background-color: #cb2026;
+  }
+}
+/* -----------------------------------------------------------*/
+/* Section - Menu Bar */
+/* -----------------------------------------------------------*/
+.mobileMenu .menuButton{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  padding: .5em;
+}
+/* -----------------------------------------------------------*/
+/* Slideout menu */
+/* -----------------------------------------------------------*/
+.closeNav{
+  color: #fff;
+  display: block;
+  text-align: right;
+  margin: .5em .5em 0 0 ;
+  padding: .5em;
+  cursor: pointer;
+}
+#menu h1{
+  color: #fff;
+  font-size: 1.5em;
+  margin: 1em;
+  text-align: center;
+}
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: #333;
+  box-shadow: inset -5px 0 10px 0px rgba(0, 0, 0, .25);
+}
+.menu-item a{
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  padding: .33em;
+  border-bottom: 1px dotted #000;
+}
+.menu-item a:hover{
+  background-color: #cb2026;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.applyGive {
+  margin: 1em;
+}
+.applyGive a{
+  color: #fff;
+  display: block;
+  text-decoration: none !important;
+  margin: 1em .25em !important;
+}
+.applyGive a:hover{
+  background-color: none !important;
+  color: #cb2026 !important;
+}
+
+/* -----------------------------------------------------------*/
+/* Section styles */
+/* -----------------------------------------------------------*/
+.sectionPadding{
+  padding: 5em 0;
+}
+.sectionPaddingSmall{
+  padding: 2em 0;
+}
+.sectionPaddingGradient{
+  background: linear-gradient(0deg, #efefef 80%, white);
+  padding: 2em 0;
+}
+.redSection{
+  background-color: #cb2026;
+}
+.redSection .button{
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+  padding: .5em;
+  margin: .25em;
+  border: 1px solid #fff;
+}
+.redSection .button:hover{
+  border-color: #fff;
+  color: #fff;
+  background-color: #cb2026;
+}
+@media (min-width: 550px) {
+  .redSection .button{
+    display: inline-block;
+  }
+}
+.graySection{
+  background-color: #333;
+}
+.graySection .button{
+  display: block;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+  padding: .5em;
+  margin: .25em;
+  border: 1px solid #ffffff;
+}
+.graySection .button:hover{
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #333;
+}
+@media (min-width: 550px) {
+  .graySection .button{
+    display: inline-block;
+  }
+}
+/* ---------------------------------------*/
+.lightGraySection{
+  background-color: #efefef;
+}
+.lightGraySection .button{
+  display: block;
+  text-align: center;
+  background-color: #efefef;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+  padding: .5em;
+  margin: .25em;
+  border: 1px solid #cb2026;
+}
+.lightGraySection .button:hover{
+  background-color: #cb2026;
+  border: 1px solid #cb2026;
+  color: #fff;
+}
+@media (min-width: 550px) {
+  .lightGraySection .button{
+    display: inline-block;
+  }
+}
+/* ---------------------------------------*/
+.whiteSection .button{
+  display: block;
+  text-align: center;
+  background-color: #cb2026;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+  padding: .5em;
+  margin: .25em;
+  border: 1px solid #cb2026;
+}
+.social a:link, .social a:visited{
+  text-decoration: none;
+  color: #cb2026;
+}
+.social a:hover{
+  color: #990000;
+}
+.whiteSection .button:hover{
+  background-color: #fff;
+  border: 1px solid #cb2026;
+  color: #cb2026;
+}
+@media (min-width: 550px) {
+  .whiteSection .button{
+    display: inline-block;
+  }
+}
+
+/* -----------------------------------------------------------*/
+/* Section - Logo */
+/* -----------------------------------------------------------*/
+.logo{
+  text-align: center;
+}
+.logo img{
+  width: 50%;
+}
+@media (min-width: 550px) {
+  .logo img{
+    width: 200px;
+  }
+}
+
+/* -----------------------------------------------------------*/
+/* Section - Hero */
+/* -----------------------------------------------------------*/
+.redSection h1, .redSection h2, .redSection h3, .redSection p, .graySection h1, .graySection h2, .graySection h3, .graySection p{
+  color: #fff;
+}
+.whiteSection h2, .lightGraySection h2{
+  color: #cb2026;
+}
+.whiteSection .byline{
+  color: #cb2026;
+  font-weight: bold;
+}
+
+
+/* -----------------------------------------------------------*/
+/* Section - Funding priorities */
+/* -----------------------------------------------------------*/
+.funding img{
+  width: 100%;
+}
+
+/* -----------------------------------------------------------*/
+/* Section - Profile */
+/* -----------------------------------------------------------*/
+.profile img{
+  width: 100%;
+  display: block;
+}
+
+/* -----------------------------------------------------------*/
+/* Footer */
+/* -----------------------------------------------------------*/
+footer{
+  background-color: #333;
+  color: #ccc;
+  padding: 2em 0;
+}
+footer ul{
+  margin-left: .5em;
+}
+@media (min-width: 550px) {
+  footer ul{
+    margin-left: 1.5em;
+  }
+}
+footer ul li{
+  margin: .25em 0;
+}
+footer a:link, footer a:visited{
+  text-decoration: none;
+  color: #ccc;
+}
+footer a:hover{
+  color: #fff;
+}
+footer .four:nth-child(2){
+  margin: 2em 0;
+}
+@media (min-width: 550px) {
+  footer .four:nth-child(2){
+    margin: auto;
+  }
+}
+footer .four:nth-child(3){
+  text-align: center;
+}
+footer .social-icons{
+  text-align: center;
+}
+footer .social-icons a{
+  display: inline-block;
+  margin: .25em;
+}

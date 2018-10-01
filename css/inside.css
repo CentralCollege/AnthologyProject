@@ -1,0 +1,390 @@
+/* -----------------------------------------------------------*/
+/* Fonts */
+/* -----------------------------------------------------------*/
+html{
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+h1,h2,h3,h4,h5{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin: .75em 0;
+  color: #cb2026;
+}
+h1,h2,h3{
+  background-color: #efefef;
+  padding: .25em;
+}
+h1{
+  font-size: 2em;
+  color: #cb2026;
+  text-align: center;
+}
+@media (min-width: 550px) {
+  h1{
+    text-align: left;
+    background-color: #efefef;
+    color: #cb2026;
+    font-size: 2em;
+    margin: 0;
+    padding: .75em 0;
+  }
+}
+h2{
+  font-size: 2em;
+}
+.redBackgroundHeading{
+  background-color: #cb2026;
+  color: #fff;
+}
+p{
+  margin: 1em 0;
+  line-height: 1.25em;
+}
+strong{
+  font-weight: bold;
+}
+html{
+  background-color: #333;
+}
+main{
+  background-color: #fff;
+}
+main a:link, main a:visited{
+  color: #cb2026;
+}
+main a:hover{
+  color: #990000;
+}
+/* -----------------------------------------------------------*/
+/* Tables */
+/* -----------------------------------------------------------*/
+table, td, th{
+	margin: 5px;
+	padding: 5px;
+}
+td{
+	line-height: 1.2em;
+}
+.centerTable{
+	margin: 0 auto;
+    width: 80%;
+}
+/* Table that boxes in the contents */
+.tableBox th{
+	font-weight:bold;
+	background-color: #990000;
+	color: #fff;
+	border:1px solid #990000;
+}
+.tableBox td{
+	border: 1px solid #ccc;
+}
+/* Table with hover effect */
+table.tableHover{
+	width: 80%;
+	margin: 0 auto;
+}
+.tableHover th{
+	font-weight:bold;
+	color:#cb2026;
+	border-bottom:1px solid #cb2026;
+	text-align: left;
+}
+.tableHover td{
+	border-bottom: 1px solid #ccc;
+}
+.tableHover tr:hover td{
+	background-color: #ffff99;
+	cursor: default;
+}
+/* -----------------------------------------------------------*/
+/* Forms */
+/* -----------------------------------------------------------*/
+.submit, .redButton{
+  display: inline-block;
+  background-color: #cb2026;
+  border: 1px solid #990000;
+  color: #fff !important;
+  padding: .5em;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+.submit:hover, .redButton:hover{
+  background-color: #fff;
+  color: #cb2026 !important;
+  cursor: pointer;
+}
+/* -----------------------------------------------------------*/
+/* Header */
+/* -----------------------------------------------------------*/
+a#logo{
+  display: block;
+  background-color: #cb2026;
+  height: 100px;
+  padding: .5em;
+  box-shadow: 0 0 20px #000;
+  text-align: center;
+  z-index: 3;
+}
+#logo img{
+  width: 200px;
+  min-width: 250px;
+  height: 100%;
+}
+@media (min-width: 550px) {
+	nav.primary{
+		display: block;
+	}
+}
+nav.primary{
+  background-color: #333;
+  padding: 12px 0 12px 1em;
+  text-align: center;
+	display: none;
+}
+@media (min-width: 550px) {
+	nav.primary{
+		display: block;
+	}
+}
+nav.primary a:link, nav.primary a:visited{
+  text-decoration: none;
+  min-height: 50px;
+  color: #fff;
+  padding: 10px 1em;
+	line-height: 2em;
+	white-space: nowrap;
+}
+@media (min-width: 925px) {
+	nav.primary a:link{
+		line-height: inherit;
+	}
+}
+nav.primary a:hover{
+  background-color: #cb2026;
+}
+/* Mobile menu */
+#mobileMenu{
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 1em;
+	display: block;
+	cursor: pointer;
+}
+@media (min-width: 550px) {
+	#mobileMenu{
+		display: none;
+	}
+}
+
+.secondaryNav{
+  background-color: #cb2026;
+  font-size: .8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: #fff;
+  border: 1px solid #cb2026;
+}
+.secondaryNav ul li{
+  display: block;
+  border-bottom: 1px solid #fff
+}
+.secondaryNav ul li:last-child{
+  border-bottom: none;
+}
+.secondaryNav a:link, .secondaryNav a:visited{
+  padding: 1em .33em;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.secondaryNav a:hover{
+  background-color: #fff;
+  color: #cb2026
+}
+.secondaryNav .current-menu-item{
+  background-color: #333;
+}
+.sectionNavTitle{
+  background-color: #990000;
+  border-bottom: 1px solid #fff;
+}
+/* sections */
+.redSection{
+  background-color: #cb2026;
+}
+.graySection{
+  background-color: #efefef;
+}
+/* -----------------------------------------------------------*/
+/* Breadcrumbs */
+/* -----------------------------------------------------------*/
+.breadcrumbs{
+  display: none;
+}
+@media (min-width: 550px) {
+  .breadcrumbs{
+    display: block;
+    text-align: right;
+    text-transform: lowercase;
+    color: #666;
+    margin: 1em 0;
+  }
+  .breadcrumbs a:link, .breadcrumbs a:visited{
+    text-decoration: none;
+    color: #666;
+  }
+  .breadcrumbs a:hover{
+    color: #cb2026;
+  }
+}
+/* -----------------------------------------------------------*/
+/* photos */
+/* -----------------------------------------------------------*/
+.page-content .size-full, .page-content .size-large{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.wp-caption{
+  background-color: #efefef;
+  padding: .25em;
+}
+.wp-caption-text{
+  padding: 0 .5em;
+}
+.alignright{
+  float: right;
+  margin: 2em 0 2em 2em;
+}
+.alignleft{
+  float: left;
+  margin: 2em 2em 2em 0;
+}
+.priority-photo{
+  height: auto;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 550px){
+  .priority-photo{
+    margin: .5em .5em .5em 0;
+    float: left;
+    width: auto;
+  }
+}
+/* -----------------------------------------------------------*/
+/* Blockquotes */
+/* -----------------------------------------------------------*/
+blockquote{
+  background-color: #ccc;
+  display: block;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  padding: .5em 1em;
+}
+blockquote strong{
+  color: #cb2026;
+}
+/* -----------------------------------------------------------*/
+/* Page Content */
+/* -----------------------------------------------------------*/
+.page-content{
+  padding-bottom: 1em;
+}
+.page-content ul, .page-content ol{
+    padding-left: 2em;
+  }
+.page-content ul li{
+    list-style: disc;
+    margin: .5em;
+    line-height: 1.25em;
+}
+.page-content ol li{
+  list-style: decimal;
+  margin: .5em;
+  padding-left: .5em;
+  line-height: 1.25em;
+}
+/* -----------------------------------------------------------*/
+/* Make youTube embeds full width */
+/* -----------------------------------------------------------*/
+.page-content p iframe{
+  width: 100%;
+}
+/* -----------------------------------------------------------*/
+/* Module - Central remote feed */
+/* -----------------------------------------------------------*/
+.flexContainer {
+  min-height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.flexContainer:after {
+  display: block;
+  content: " invisible node "
+  flex(999 999 auto)
+}
+.flexItem {
+  flex: 0 0 auto;
+  margin: 5px;
+}
+.flexItem img{
+  width: 100%;
+}
+/* -----------------------------------------------------------*/
+/* Footer */
+/* -----------------------------------------------------------*/
+footer{
+  background-color: #333;
+  border-top: 1px solid #666666;
+  line-height: 1.25em;
+  color: #ccc;
+}
+footer div.one-third{
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+footer h5{
+  text-transform: uppercase;
+  border-bottom: 1px solid #666;
+  padding-bottom: 3px;
+  font-size: 1.2em;
+  color: #EBE1D6;
+}
+footer a:link, footer a:visited{
+  color: #ccc;
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer ul{
+  margin: .5em 0 0 1em;
+}
+footer div:nth-child(3){
+  text-align: center;
+}
+footer div:nth-child(3) a{
+  margin: 0 .5em;
+}
+.socialIcons{
+  text-align: center;
+}
+.socialIcons a:link, .socialIcons a:visited{
+  color: #ccc;
+}
+.socialIcons a:hover{
+  color: #fff;
+}

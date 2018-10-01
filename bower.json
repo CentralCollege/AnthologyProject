@@ -1,0 +1,16 @@
+{
+  "name": "wpt-alumni",
+  "homepage": "https://github.com/CentralCollege/wpt-alumni",
+  "authors": [
+    "Jacob Oyen <oyenj@central.edu>"
+  ],
+  "description": "WordPress template for the alumni section of the Central Website",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-modal": "^0.8.0",
+    "font-awesome": "^4.7.0",
+    "reset-css": "^2.2.0",
+    "slideout.js": "^1.0.1"
+  }
+}
