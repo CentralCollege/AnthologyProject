@@ -14,9 +14,6 @@
 				.hero{
 					text-align: center;
 				}
-				.legacy{
-					background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/centralHall.jpg'); background-size: cover;
-				}
 			}
 		</style>
 		<?php if ($_SERVER['HTTP_HOST'] == '192.168.56.111'){?>
@@ -92,19 +89,33 @@
       </section>
 
 			<section class="whiteSection">
-				<div class="container profile">
-					<div class="seven columns">
-						<h2>JOSH PROKUPEK</h2>
-						<p>I am using every opportunity that Central is giving me because I know how lucky I am. Your generosity is the reason that I can have these life experiences.</p>
-						<p><a href="/alumni/journey-scholarship-fund" class="button gaJourneyFund">Journey Scholarship Fund</a></p>
-					</div>
-					<div class="five columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/josh-prokupek.jpg" alt="Josh Prokupek" />
+				<div class="container">
+					<div class="twelve columns">
+						<?php
+						// the query
+						$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+
+						<?php if ( $wpb_all_query->have_posts() ) : ?>
+
+						<ul>
+
+						    <!-- the loop -->
+						    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+						        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+						    <?php endwhile; ?>
+						    <!-- end of the loop -->
+
+						</ul>
+
+						    <?php wp_reset_postdata(); ?>
+
+						<?php else : ?>
+						    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+						<?php endif; ?>
 					</div>
 				</div>
 			</section>
-
-			<section class="graySection sectionPadding">
+			<!-- <section class="graySection sectionPadding">
 				<div class="container">
 					<div class="four columns">
 						<h3>Keep us up to date</h3>
@@ -148,7 +159,7 @@
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/centralRedLogo.png" alt="Central RED Society logo.">
 					</div>
 			</div>
-			</section>
+			</section> -->
 			<footer>
 				<div class="container">
 					<div class="four columns">
