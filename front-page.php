@@ -3,16 +3,16 @@
 		<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="initial-scale=1.0,width=device-width" />
-		<title>Alumni/Friends - Central College</title>
-		<meta name="description" content="Central College Alumni and Friends: Stay in touch with the alumni newsletter, photos from alumni events and the Civitas alumni magazine." />
-    <meta name="Keywords" content="Central College; Alumni; Friends; Donors; newsletter; gifts; online giving; give online; photos; Civitas; Civitas online; Endowment; homecoming; family weekend; planned giving; alumni events" />
+		<title>Writing Anthology - Central College</title>
+		<meta name="description" content="Central College Writing Anthology Site" />
+    <meta name="Keywords" content="Central College; Writing Anthology" />
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
 		<link href='<?php echo get_stylesheet_directory_uri() ?>/external-libraries/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
     <link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css">
 		<style type="text/css">
 			@media (min-width: 550px) {
 				.hero{
-					background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/lemmingRace.jpg'); background-size: cover;
+					text-align: center;
 				}
 				.legacy{
 					background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/centralHall.jpg'); background-size: cover;
@@ -80,91 +80,17 @@
 				<a href="https://athletics.central.edu">Athletics</a>
 			</nav>
 			<section class="graySection mobileMenu"><button class="menuButton"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button></section>
+
 			<!--- Hero Section !--->
 			<section class="hero redSection sectionPadding">
         <div class="container">
           <div class="ten columns">
-            <h1>Powering the college one gift at a time.</h1>
-            <p>At Central, we are family. We are passionate. We are engaged. We embody the Central "Hoo-rah!" spirit. We celebrate our traditions that connect our past, present and future. We support the success of our current and future students. We are alumni. We are friends of the college. We are... Forever Dutch!</p>
-						<p><a href="/alumni/priority/" class="button gaHero">Funding Priorities</a> <a href="/alumni/stay-connected/" class="button gaHero">Stay Connected</a> <a href="/alumni/events" class="button gaHero">Upcoming alumni events</a> <a href="/alumni/ways-to-give/online/" class="button gaHero">Make a gift</a></p>
+            <h1>The Writing Anthology</h1>
+						<h1>Current Issue Year</h1>
+						<p><a href="" class="button gaHero">Past Issues</a></p>
         </div>
       </section>
-			<section class="whiteSection sectionPaddingSmall">
-				<div class="container funding">
-					<div class="six columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/journeyStudent.jpg" alt="Journey Scholarship Student">
-						<h2>Journey Scholarship Fund</h2>
-						<p>Donors provided financial assistance for 611 students this year.</p>
-						<p><a href="/alumni/journey-scholarship-fund" class="button gaFundingPriorities">Learn More</a></p>
-					</div>
-					<div class="six columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foreverDutch.jpg" alt="Rendering of the athletic training room for the forever dutch campaign">
-						<h2>Forever Dutch</h2>
-						<p>Support a major renovation of the P.H. Kuyper Gymnasium.</p>
-						<p><a href="https://forever.central.edu" class="button gaFundingPriorities">I am forever dutch</a></p>
-					</div>
-				</div>
-				<div class="container funding">
-					<div class="six columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/douwstra.jpg" alt="Rendering of the Douwstra Auditorium renovation">
-						<h2>Douwstra Auditorium</h2>
-						<p>Help us shine a brighter spotlight on this historic venue.</p>
-						<p><a href="/alumni/priority/douwstra-auditorium/" class="button gaFundingPriorities">More info</a></p>
-					</div>
-					<div class="six columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/mock-trial.jpg" alt="Central College students participating in Mock Trial">
-						<h2>Mock Trial</h2>
-						<p>Help our students take Mock Trial to the next level.</p>
-						<p><a href="/alumni/priority/mock-trial/" class="button gaFundingPriorities">More info</a></p>
-					</div>
-				</div>
-				</section>
-				<section class="lightGraySection sectionPaddingGradient">
-					<div class="container">
-					<h2>Other Giving Opportunities</h2>
-					<p><a href="/alumni/ways-to-give/matching-gifts/" class="button gaOtherGiving">Matching Gifts</a> <a href="https://ignite.central.edu" class="button gaOtherGiving">Ignite</a></p>
-				</div>
-			</div>
-			</section>
-			<section class="graySection sectionPadding legacy">
-				<div class="container">
-					<h2>Leave a legacy</h2>
-					<p>Your support of Central College can have a more lasting impact.</p>
-					<p><a href="http://plannedgiving.central.edu" class="button gaOtherGiving">Gift and estate planning</a> <a href="/alumni/endowment/" class="button gaOtherGiving">Endowment</a></p>
-				</div>
-			</section>
-			<section class="redSection sectionPadding">
-				<div class="container events">
-					<h2>Upcoming events</h2>
-					<p>Join us and other Central family members as we celebrate everything Dutch! Don't forget to bring your "Hoo-rah!"</p>
-				</div>
-				<div class="container">
-					<?php
-					$args = array(
-						'post_type' => 'events',
-						'posts_per_page' => 3,
-						'meta_key' => 'eventDate',
-						'orderby' => 'meta_value_num',
-						'order' => 'ASC',
-						'meta_query' => array(
-							'key' => 'eventDate',
-							'value' => strtotime('-1 day', time()),
-							'compare' => '>='
-						)
-					);
-					$eventsLoop = new WP_Query( $args );
-					while ( $eventsLoop->have_posts() ) : $eventsLoop->the_post();
-						echo '<div class="four columns">';
-						echo '<h3>' . get_the_title() . '</h3>';
-						if (strlen(get_post_meta(get_the_ID(), 'eventDisplayDate', true))){
-							echo '<p>' . get_post_meta(get_the_ID(), 'eventDisplayDate', true) . '</p>';
-						}
-						echo the_excerpt();
-						echo '<a class="button gaEventSignup" href="' . get_permalink() . '">Sign me up</a>';
-						echo '</div>';
-					endwhile;?>
-				</div>
-			</section>
+
 			<section class="whiteSection">
 				<div class="container profile">
 					<div class="seven columns">

@@ -1,10 +1,10 @@
 {
-  "name": "wpt-alumni",
-  "homepage": "https://github.com/CentralCollege/wpt-alumni",
+  "name": "wpt-WritingAnthology",
+  "homepage": "https://github.com/CentralCollege/wpt-writing-anthology",
   "authors": [
-    "Jacob Oyen <oyenj@central.edu>"
+    "Andrew Gorman <gormana1@central.edu>"
   ],
-  "description": "WordPress template for the alumni section of the Central Website",
+  "description": "",
   "private": true,
   "dependencies": {
     "jquery": "^3.1.1",
