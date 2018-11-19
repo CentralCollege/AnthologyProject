@@ -89,58 +89,52 @@
       </section>
 
 			<section class="whiteSection">
-				<section class="container">
-				  <div class="nine columns page-content">
-				    <?php if (have_posts()) : while (have_posts()) : the_post();?>
-				      <h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
-				      <p><strong><?php echo get_post_meta($post->ID, 'eventDisplayDate', true);?></strong></p>
-				      <?php
-
-				        the_content();
-				        $eventID = get_post_meta($post->ID, 'eventID', true);
-				        echo '<p>';
-				        if (strlen( $eventID )){
-				            echo " <a href='" . get_stylesheet_directory_uri() . "/ajax/whos-coming.php?ID=" . $eventID ."' rel='modal:open' class='redButton'>See who's attending</a> ";
-				        }
-				        $title = the_title('','',false);
-				        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-				        if ($urlOverride != "NONE"){
-				          if (strlen($urlOverride) > 0){
-				              echo ' <a href="' . $urlOverride . '"class="redButton">Register Now!</a> ';
-				          }else{
-				              echo ' <a href="https://centralcollege.formstack.com/forms/alumni_events?registering_for=' . $title .'&eventID=' . $eventID . '"class="redButton">Let us know you\'re attending!</a> ';
-				          }
-				        }
-				        echo '</p>';?>
-				<?php
-				        endwhile; ?>
-
-				      </div>
-				      <div class="three columns">
-				        <div class="secondaryNav">
-				        <ul>
-				          <li class="sectionNavTitle"><a href="/alumni"><?php bloginfo('title');?> home</a></li>
-				        </ul>
-				        <?php
-				        $args = array(
-				          //'container_class' => 'secondaryNav',
-				          'depth' => '1'
-				        );
-				         wp_nav_menu( $args );?>
-				       </div>
-				      </div>
-				      <?php
-
-				        else :?>
-				            <h1>Error 404</h1>
-				            <h2 class="center">Not Found</h2>
-				            <p class="center">Sorry, but you are looking for something that isn't here.</p>
-				            <p>Start over at <a href="/">the homepage</a>.</p>
-				          </div>
-				        <?php endif;?>
-
-
-				</section>
+				<div class="container">
+					<div class="row">
+					  <div class="three columns">
+					    <?php
+							$count = 0;
+							if (have_posts()) : while (have_posts()) : the_post();
+							echo "$count";?>
+					      <?php
+								if ($count < 3){ ?>
+									<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
+									<?php
+									$count++;
+					        the_content();
+					        $title = the_title('','',false);
+									$eventID = get_post_meta($post->ID, 'eventID', true);
+					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
+									?></div><?php
+									if ($count <= 2) {
+										?><div class="three columns"><?php
+									}
+								}
+								elseif ($count >= 3) {
+									$count = 0;
+									?>
+										<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
+									</div>
+									<div class="row">
+										<div class="three columns">
+										<?php
+										$count++;
+						        the_content();
+						        $title = the_title('','',false);
+										$eventID = get_post_meta($post->ID, 'eventID', true);
+						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
+										?></div><?php
+										if ($count <= 2) {
+											?><div class="three columns"><?php
+										}
+								}
+					        endwhile;
+								endif;
+								?>
+					      </div>
+								<div class="clearBoth"></div>
+					</div>
+				</div>
 			</section>
 
 			<footer>
