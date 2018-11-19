@@ -21,6 +21,7 @@
     "imagemin-mozjpeg": "^6.0.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "php": "0.0.1"
   }
 }

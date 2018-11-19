@@ -89,77 +89,60 @@
       </section>
 
 			<section class="whiteSection">
-				<div class="container">
-					<div class="twelve columns">
-						<?php
-						// the query
-						$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+				<section class="container">
+				  <div class="nine columns page-content">
+				    <?php if (have_posts()) : while (have_posts()) : the_post();?>
+				      <h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
+				      <p><strong><?php echo get_post_meta($post->ID, 'eventDisplayDate', true);?></strong></p>
+				      <?php
 
-						<?php if ( $wpb_all_query->have_posts() ) : ?>
+				        the_content();
+				        $eventID = get_post_meta($post->ID, 'eventID', true);
+				        echo '<p>';
+				        if (strlen( $eventID )){
+				            echo " <a href='" . get_stylesheet_directory_uri() . "/ajax/whos-coming.php?ID=" . $eventID ."' rel='modal:open' class='redButton'>See who's attending</a> ";
+				        }
+				        $title = the_title('','',false);
+				        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
+				        if ($urlOverride != "NONE"){
+				          if (strlen($urlOverride) > 0){
+				              echo ' <a href="' . $urlOverride . '"class="redButton">Register Now!</a> ';
+				          }else{
+				              echo ' <a href="https://centralcollege.formstack.com/forms/alumni_events?registering_for=' . $title .'&eventID=' . $eventID . '"class="redButton">Let us know you\'re attending!</a> ';
+				          }
+				        }
+				        echo '</p>';?>
+				<?php
+				        endwhile; ?>
 
-						<ul>
+				      </div>
+				      <div class="three columns">
+				        <div class="secondaryNav">
+				        <ul>
+				          <li class="sectionNavTitle"><a href="/alumni"><?php bloginfo('title');?> home</a></li>
+				        </ul>
+				        <?php
+				        $args = array(
+				          //'container_class' => 'secondaryNav',
+				          'depth' => '1'
+				        );
+				         wp_nav_menu( $args );?>
+				       </div>
+				      </div>
+				      <?php
 
-						    <!-- the loop -->
-						    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-						        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-						    <?php endwhile; ?>
-						    <!-- end of the loop -->
+				        else :?>
+				            <h1>Error 404</h1>
+				            <h2 class="center">Not Found</h2>
+				            <p class="center">Sorry, but you are looking for something that isn't here.</p>
+				            <p>Start over at <a href="/">the homepage</a>.</p>
+				          </div>
+				        <?php endif;?>
 
-						</ul>
 
-						    <?php wp_reset_postdata(); ?>
-
-						<?php else : ?>
-						    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-						<?php endif; ?>
-					</div>
-				</div>
+				</section>
 			</section>
-			<!-- <section class="graySection sectionPadding">
-				<div class="container">
-					<div class="four columns">
-						<h3>Keep us up to date</h3>
-						<p>Tell us what's new, send us updates about your job, family and more.</p>
-						<a href="/alumni/stay-connected/alumni-updates/" class="button gaKeepUpToDate">Update my info</a>
-					</div>
-					<div class="four columns">
-						<h3>What's happening</h3>
-						<p>Check out our online alumni magazine, Civitas, to learn what other alumni are doing in the world.</p>
-						<a href="https://civitas.central.edu" class="button gaKeepUpToDate">Read Civitas</a>
-					</div>
-					<div class="four columns">
-						<h3>Looking for transcripts?</h3>
-						<p>Request your transcript online through the national clearing house system.</p>
-						<a href="https://www.central.edu/academics/requesting-transcripts/" class="button gaKeepUpToDate">Get my transcript</a>
-					</div>
 
-				</div>
-			</section>
-			<section class="whiteSection">
-				<div class="container">
-					<div class="five columns social">
-						<h2>Get Social</h2>
-						<p>Connect with us to stay up to date with the latest and greatest on campus.</p>
-							<p><a href="https://www.facebook.com/CentralCollegeAlums/"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i> Central College Alumni</a><br />
-							<a href="https://twitter.com/central_alums/"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i> @central_alums</a><br />
-							<a href="tel:1-877-462-3687"><i class="fa fa-2x fa-phone-square" aria-hidden="true"></i> 1-877-462-3687</a></p>
-					</div>
-					<div class="six offset-by-one columns" style="border: 1px solid #ccc; padding: 1px; border-radius: .25em; margin-top: 1em; margin-bottom: 1em;">
-						<a class="twitter-timeline"  href="https://twitter.com/central_alums"  data-aria-polite="assertive" data-tweet-limit="1" data-chrome="noheader nofooter noborders"></a>
-					</div>
-			</section>
-			<section class="redSection sectionPadding">
-				<div class="container">
-					<div class="six columns">
-						<h2>Central RED society</h2>
-						<p>Central RED Society is Central College's innovative life-long learning program that enriches members' lives through relevant, broad-based learning experiences. Central RED Society will foster creativity, intellectual curiosity and engagement with Central College and the community!</p>
-						<p><a href="/red" class="button gaCentralRed">Join Central Red</a></p>
-					</div>
-					<div class="four offset-by-two columns">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/centralRedLogo.png" alt="Central RED Society logo.">
-					</div>
-			</div>
-			</section> -->
 			<footer>
 				<div class="container">
 					<div class="four columns">
