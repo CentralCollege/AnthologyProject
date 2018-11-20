@@ -25,7 +25,12 @@ get_header();
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
       <h2><?php echo get_the_title();?></h2>
-      <?php the_content(); ?>
+      <p><?php echo get_field( "class_name" ); ?></p>
+      <h5 style="float:right; align:right;"><?php echo get_field( "student_author" ); ?></h5>
+      <div class="clearBoth"></div>
+      <p><?php echo get_field( "authors_note" ); ?></p>
+      <?php the_content();
+      ?>
     </div>
     <div class="three columns">
       <div class="secondaryNav">

@@ -17,7 +17,11 @@ get_header();
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
       <h2><?php echo get_the_title();?></h2>
-      <?php the_content(); ?>
+      <?php the_content();
+
+      get_post_meta($post_id, 'student_author', $single);
+?>
+<p>test</p>
     </div>
     <div class="three columns">
       <div class="secondaryNav">

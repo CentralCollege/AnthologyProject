@@ -94,29 +94,38 @@
 					  <div class="three columns">
 					    <?php
 							$count = 0;
-							if (have_posts()) : while (have_posts()) : the_post();
-							echo "$count";?>
+							if (have_posts()) : while (have_posts()) : the_post(); ?>
 					      <?php
-								if ($count < 3){ ?>
+								if ($count <= 3){
+									echo "$count";
+									if ( has_post_thumbnail() ) {
+										?><a href="<?php the_permalink()?>"> <?php
+										the_post_thumbnail(); ?> </a> <?php
+									}
+									?>
 									<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 									<?php
 									$count++;
-					        the_content();
+					        the_excerpt();
 					        $title = the_title('','',false);
 									$eventID = get_post_meta($post->ID, 'eventID', true);
 					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
 									?></div><?php
-									if ($count <= 2) {
+									if ($count <= 3) {
 										?><div class="three columns"><?php
 									}
 								}
-								elseif ($count >= 3) {
+								elseif ($count > 3) {
 									$count = 0;
 									?>
-										<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 									</div>
 									<div class="row">
 										<div class="three columns">
+											<?php echo "$count";
+											if ( has_post_thumbnail() ) {
+												the_post_thumbnail();
+											} ?>
+											<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 										<?php
 										$count++;
 						        the_content();

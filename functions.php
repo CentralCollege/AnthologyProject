@@ -12,6 +12,9 @@ function cui_add_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'cui_add_styles' );
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
+
 
 // ------------------------------------------------------------------------
 // Custom post type for alumni events
