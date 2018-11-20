@@ -9,28 +9,25 @@ get_header();
 <section class="graySection">
   <div class="container">
     <div class="twelve columns">
-      <h1><?php bloginfo('title');?></h1>
+      <h1><?php bloginfo('title');?> - 2018</h1>
     </div>
-  </div>
-</section>
-<section class="breadcrumbs">
-  <div class="container">
-    <?php
-    if ( get_post_type( get_the_ID() ) != 'funding-priorities' ) {
-        central_breadcrumbs();
-    } ?>
   </div>
 </section>
 <section class="container">
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
+      <div id="featuredImage" style="align-items:center;">
+        <?php the_post_thumbnail();?>
+      </div>
       <h2><?php echo get_the_title();?></h2>
-      <p><?php echo get_field( "class_name" ); ?></p>
+      <h5 style="float:left; align:left;"><?php echo get_field( "class_name_" ); ?> Class name should be here but it's not working</h5>
       <h5 style="float:right; align:right;"><?php echo get_field( "student_author" ); ?></h5>
-      <div class="clearBoth"></div>
-      <p><?php echo get_field( "authors_note" ); ?></p>
+      <div style="clear:both;"></div>
+      <strong><p style="text-align:center;"><?php echo get_field( "authors_note" ); ?></p></strong>
       <?php the_content();
       ?>
+      <h3>Works Cited</h3>
+      <strong><p style="text-align:left;"><?php echo get_field( "references_" ); ?></p></strong>
     </div>
     <div class="three columns">
       <div class="secondaryNav">
