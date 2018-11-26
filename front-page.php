@@ -91,16 +91,15 @@
 			<section class="whiteSection">
 				<div class="container">
 					<div class="row">
-					  <div class="three columns">
+					  <div class="three columns story">
 					    <?php
 							$count = 0;
 							if (have_posts()) : while (have_posts()) : the_post(); ?>
 					      <?php
 								if ($count <= 3){
-									echo "$count";
+									?><a href="<?php the_permalink()?>"> <?php
 									if ( has_post_thumbnail() ) {
-										?><a href="<?php the_permalink()?>"> <?php
-										the_post_thumbnail(); ?> </a> <?php
+										the_post_thumbnail();
 									}
 									?>
 									<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
@@ -110,9 +109,9 @@
 					        $title = the_title('','',false);
 									$eventID = get_post_meta($post->ID, 'eventID', true);
 					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-									?></div><?php
+									?></div></a><?php
 									if ($count <= 3) {
-										?><div class="three columns"><?php
+										?><div class="three columns story"><?php
 									}
 								}
 								elseif ($count > 3) {
@@ -120,8 +119,8 @@
 									?>
 									</div>
 									<div class="row">
-										<div class="three columns">
-											<?php echo "$count";
+										<div class="three columns story">
+											<a href="<?php the_permalink()?>"> <?php
 											if ( has_post_thumbnail() ) {
 												the_post_thumbnail();
 											} ?>
@@ -132,7 +131,7 @@
 						        $title = the_title('','',false);
 										$eventID = get_post_meta($post->ID, 'eventID', true);
 						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-										?></div><?php
+										?></div></a><?php
 										if ($count <= 2) {
 											?><div class="three columns"><?php
 										}
