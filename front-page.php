@@ -79,16 +79,15 @@
 			<section class="graySection mobileMenu"><button class="menuButton"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button></section>
 
 			<!--- Hero Section !--->
-			<section class="hero redSection sectionPadding">
+			<section class="redSection sectionPaddingSmall">
         <div class="container">
           <div class="ten columns">
             <h1>The Writing Anthology</h1>
-						<h1>Current Issue Year</h1>
-						<p><a href="" class="button gaHero">Past Issues</a></p>
+						<p><a href="" class="button gaHero">Current Issue</a><a href="" class="button gaHero">Past Issues</a></p>
         </div>
       </section>
 
-			<section class="whiteSection">
+			<section class="whiteSection sectionPadding">
 				<div class="container">
 					<div class="row">
 					  <div class="three columns story">
@@ -105,8 +104,8 @@
 									<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 									<?php
 									$count++;
-					        the_excerpt();
-									//echo get_field( "authors_note" );
+					        //the_excerpt();
+									echo get_field( "student_author" );
 					        $title = the_title('','',false);
 									$eventID = get_post_meta($post->ID, 'eventID', true);
 					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
@@ -128,8 +127,8 @@
 											<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 										<?php
 										$count++;
-						        the_excerpt();
-										//echo get_field( "authors_note" );
+						        //the_excerpt();
+										echo get_field( "student_author" );
 						        $title = the_title('','',false);
 										$eventID = get_post_meta($post->ID, 'eventID', true);
 						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);

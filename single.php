@@ -6,21 +6,21 @@ if (strlen($urlOverride) > 0){
 }
 get_header();
 ?>
-<section class="graySection">
+<section class="graySection sectionPaddingSmall">
   <div class="container">
     <div class="twelve columns">
       <h1><?php bloginfo('title');?> - 2018</h1>
     </div>
   </div>
 </section>
-<section class="container">
+<section class="container sectionPaddingSmall">
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
       <div id="featuredImage" style="align-items:center;">
         <?php the_post_thumbnail();?>
       </div>
       <h2><?php echo get_the_title();?></h2>
-      <h5 style="float:left; align:left;">By: <?php echo get_field( "student_author" ); ?></h5>
+      <h5 style="float:left; align:left;">By <?php echo get_field( "student_author" ); ?></h5>
       <h5 style="float:right; align:right;"><?php echo get_field( "class_name_" ); ?> </h5>
       <div style="clear:both;"></div>
       <strong><p style="text-align:center;"><?php echo get_field( "authors_note" ); ?></p></strong>
