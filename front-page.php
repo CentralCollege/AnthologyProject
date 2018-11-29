@@ -79,11 +79,13 @@
 			<section class="graySection mobileMenu"><button class="menuButton"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button></section>
 
 			<!--- Hero Section !--->
-			<section class="redSection sectionPaddingSmall">
+			<section class="redSection hero sectionPaddingSmall">
         <div class="container">
-          <div class="ten columns">
+          <div class="twelve columns">
             <h1>The Writing Anthology</h1>
-						<p><a href="" class="button gaHero">Current Issue</a><a href="" class="button gaHero">Past Issues</a></p>
+						<h3>A Publication of the English Department and the Art Department</h3>
+						<p><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
+						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
       </section>
 

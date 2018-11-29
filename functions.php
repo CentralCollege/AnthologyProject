@@ -46,43 +46,43 @@ function my_toolbars( $toolbars )
 }
 
 // ------------------------------------------------------------------------
-// Custom post type for alumni events
+// Custom post type for Anthology Issues
 // ------------------------------------------------------------------------
 // Use this to set expires for this post type: https://code.tutsplus.com/tutorials/add-an-expiry-date-to-wordpress-posts--cms-22665
-function events_post_type() {
+function issue_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Events', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Events', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Events', 'text_domain' ),
-		'name_admin_bar'        => __( 'Event', 'text_domain' ),
+		'name'                  => _x( 'Issues', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Issues', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Issues', 'text_domain' ),
+		'name_admin_bar'        => __( 'Issues', 'text_domain' ),
 		'archives'              => __( '', 'text_domain' ),
-		'attributes'            => __( 'Event Attributes', 'text_domain' ),
-		'all_items'             => __( 'All Events', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Event', 'text_domain' ),
-		'add_new'               => __( 'Add Event', 'text_domain' ),
-		'new_item'              => __( 'New Event', 'text_domain' ),
-		'edit_item'             => __( 'Edit Event', 'text_domain' ),
-		'update_item'           => __( 'Update Event', 'text_domain' ),
-		'view_item'             => __( 'View Event', 'text_domain' ),
-		'view_items'            => __( 'View Events', 'text_domain' ),
-		'search_items'          => __( 'Search Events', 'text_domain' ),
-		'not_found'             => __( 'Event Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Event Not found in Trash', 'text_domain' ),
+		'attributes'            => __( 'Issue Attributes', 'text_domain' ),
+		'all_items'             => __( 'All Issues', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Issue', 'text_domain' ),
+		'add_new'               => __( 'Add Issue', 'text_domain' ),
+		'new_item'              => __( 'New Issue', 'text_domain' ),
+		'edit_item'             => __( 'Edit Issue', 'text_domain' ),
+		'update_item'           => __( 'Update Issue', 'text_domain' ),
+		'view_item'             => __( 'View Issue', 'text_domain' ),
+		'view_items'            => __( 'View Issues', 'text_domain' ),
+		'search_items'          => __( 'Search Issues', 'text_domain' ),
+		'not_found'             => __( 'Issue Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Issue Not found in Trash', 'text_domain' ),
 		'featured_image'        => __( 'Header Image', 'text_domain' ),
 		'set_featured_image'    => __( 'Set header image', 'text_domain' ),
 		'remove_featured_image' => __( 'Remove header image', 'text_domain' ),
 		'use_featured_image'    => __( 'Use as header image', 'text_domain' )
 	);
 	$rewrite = array(
-		'slug'                  => 'events',
+		'slug'                  => 'Issues',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => 'Events',
-		'description'           => 'Alumni Events',
+		'label'                 => 'Issues',
+		'description'           => 'Anthology Issues',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 		'hierarchical'          => false,
@@ -107,142 +107,10 @@ function events_post_type() {
       'read_private_posts'    => 'read_private_events',
       'create_posts'          => 'edit_events')
 	);
-	register_post_type( 'events', $args );
+	register_post_type( 'Issues', $args );
 
 }
-add_action( 'init', 'events_post_type', 0 );
-
-// ------------------------------------------------------------------------
-// Custom post type for funding proiorities
-// ------------------------------------------------------------------------
-// Use this to set expires for this post type: https://code.tutsplus.com/tutorials/add-an-expiry-date-to-wordpress-posts--cms-22665
-function priorities_post_type() {
-
-	$labels = array(
-		'name'                  => _x( 'Funding Priorities', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Funding Priorities', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Funding Priorities', 'text_domain' ),
-		'name_admin_bar'        => __( 'Funding Priority', 'text_domain' ),
-		'archives'              => __( '', 'text_domain' ),
-		'attributes'            => __( 'Funding Priority Attributes', 'text_domain' ),
-		'all_items'             => __( 'All Funding Priorities', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Funding Priority', 'text_domain' ),
-		'add_new'               => __( 'Add Funding Priority', 'text_domain' ),
-		'new_item'              => __( 'New Funding Priority', 'text_domain' ),
-		'edit_item'             => __( 'Edit Funding Priority', 'text_domain' ),
-		'update_item'           => __( 'Update Funding Priority', 'text_domain' ),
-		'view_item'             => __( 'View Funding Priority', 'text_domain' ),
-		'view_items'            => __( 'View Funding Priorities', 'text_domain' ),
-		'search_items'          => __( 'Search Funding Priorities', 'text_domain' ),
-		'not_found'             => __( 'Funding Priority Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Funding Priority Not found in Trash', 'text_domain' )
-	);
-	$rewrite = array(
-		'slug'                  => 'priority',
-		'with_front'            => true,
-		'pages'                 => true,
-		'feeds'                 => true,
-	);
-	$args = array(
-		'label'                 => 'Funding Priorities',
-		'description'           => 'Alumni Funding Priorities',
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
-		'hierarchical'          => false,
-		'public'                => true,
-    'has_archive'           => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'can_export'            => true,
-		'rewrite'               => $rewrite,
-    'menu_icon'             => 'dashicons-welcome-view-site',
-    'show_in_rest'          => true
-	);
-	register_post_type( 'funding-priorities', $args );
-
-}
-add_action( 'init', 'priorities_post_type', 0 );
-
-//Allow funding priorities to have featured images.
-add_theme_support('post-thumbnails', array('funding-priorities'));
-add_image_size( 'central-home-large', 400, 266, true);
-
-//Setup metaboxes
-function cui_setup_event_metaboxes(){
-  add_action('add_meta_boxes', 'cui_add_event_metaboxes');
-  add_action('save_post', 'cui_save_event_metaboxes');
-}
-function cui_add_event_metaboxes(){
-  add_meta_box('alumni-events', 'Alumni Event Details', 'cui_add_event_metabox_details', 'events');
-}
-
-function cui_add_event_metabox_details($post_id){
-  wp_nonce_url( basename( __FILE__ ), 'cui_event_metabox_nonce' );
-  ?><p><label for="eventID">Event ID from Datatel</label>: <input type="text" name="eventID" id="eventID" value="<?php echo get_post_meta($post_id->ID, 'eventID', true);?>" style="width: 25%;"></p>
-  <p><label for="eventDisplayDate">Event Display Date</label>: <input type="text" name="eventDisplayDate" id="eventDisplayDate" value="<?php echo get_post_meta($post_id->ID, 'eventDisplayDate', true);?>" style="width: 25%;"><br />
-  <span class="dashicons dashicons-info"></span> Reminder: Use <a href="https://brand.central.edu/writing-style-guide/">AP Style</a> when formatting dates.</p>
-  <p><label for="eventDate">Event Date</label>: <input type="text" name="eventDate" id="eventDate" value="<?php echo date('m/d/Y', get_post_meta($post_id->ID, 'eventDate', true));?>" style="width: 25%;"></p>
-  <p><label for="urlOverride">URL Override (advanced)</label>: <input type="text" name="urlOverride" id="urlOverride" value="<?php echo get_post_meta($post_id->ID, 'urlOverride', true);?>" style="width: 25%;"><br />
-  <span class="dashicons dashicons-info"></span> Use "NONE" if you don't want an online registration button to appear.</p><?php
-}
-function cui_save_event_metaboxes($post_id){
-    $is_autosave = wp_is_post_autosave( $post_id );
-    $is_revision = wp_is_post_revision( $post_id );
-    $is_valid_nonce = ( isset( $_POST[ 'cui_event_metabox_nonce' ] ) && wp_verify_nonce( $_POST[ 'cui_event_metabox_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
-
-    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
-        return;
-    }
-    if ( isset( $_POST['eventID'])){
-      update_post_meta( $post_id, 'eventID', sanitize_text_field( $_POST[ 'eventID' ] ) );
-    }
-    if ( isset( $_POST['eventDisplayDate'])){
-      update_post_meta( $post_id, 'eventDisplayDate', sanitize_text_field( $_POST['eventDisplayDate']) );
-    }
-    if ( isset( $_POST['eventDate'])){
-      $convertDate = strtotime( $_POST[ 'eventDate' ] );
-      update_post_meta( $post_id, 'eventDate', sanitize_text_field( $convertDate ) );
-    }
-    if ( isset( $_POST['urlOverride'])){
-      update_post_meta( $post_id, 'urlOverride', sanitize_text_field( $_POST[ 'urlOverride' ] ) );
-    }
-  }
-
-  add_action('load-post.php', 'cui_setup_event_metaboxes');
-  add_action('load-post-new.php', 'cui_setup_event_metaboxes');
-
-  //Setup metaboxes for funding priorities
-  function cui_setup_funding_metaboxes(){
-    add_action('add_meta_boxes', 'cui_add_funding_metaboxes');
-    add_action('save_post', 'cui_save_funding_metaboxes');
-  }
-  function cui_add_funding_metaboxes(){
-    add_meta_box('funding-details', 'Funding Priority Details', 'cui_add_funding_metabox_details', 'funding-priorities');
-  }
-
-  function cui_add_funding_metabox_details($post_id){
-    wp_nonce_url( basename( __FILE__ ), 'cui_funding_metabox_nonce' );
-    ?>
-    <p><label for="urlOverride">URL Override</label>: <input type="text" name="urlOverride" id="urlOverride" value="<?php echo get_post_meta($post_id->ID, 'urlOverride', true);?>" style="width: 25%;"><br />
-    <span class="dashicons dashicons-info"></span> Use this if you don't want to point to the automatically generated <span class="dashicons dashicons-wordpress-alt"></span> page.</p><?php
-  }
-  function cui_save_funding_metaboxes($post_id){
-      $is_autosave = wp_is_post_autosave( $post_id );
-      $is_revision = wp_is_post_revision( $post_id );
-      $is_valid_nonce = ( isset( $_POST[ 'cui_funding_metabox_nonce' ] ) && wp_verify_nonce( $_POST[ 'cui_funding_metabox_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
-
-      if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
-          return;
-      }
-      if ( isset( $_POST['urlOverride'])){
-        update_post_meta( $post_id, 'urlOverride', sanitize_text_field( $_POST[ 'urlOverride' ] ) );
-      }
-    }
-
-    add_action('load-post.php', 'cui_setup_funding_metaboxes');
-    add_action('load-post-new.php', 'cui_setup_funding_metaboxes');
-
+add_action( 'init', 'issue_post_type', 0 );
 function cui_change_event_archive_output($query){
   if ( $query->is_main_query() && is_post_type_archive('events') && !is_admin()) {
         $query->set( 'posts_per_page', 25 );
