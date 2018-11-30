@@ -19,23 +19,23 @@ get_header();
     <section class="whiteSection sectionPadding">
       <div class="container">
         <div class="row">
-          <div class="three columns story">
+          <div class="three columns ">
             <?php
             $count = 0;
             if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php
               if ($count <= 3){
                 ?><a href="<?php the_permalink()?>"> <?php
-                  the_post_thumbnail();
+                  the_post_thumbnail('issue-cover', array('class' => 'issueCoverImage'));
                 ?>
-                <h2><?php the_title();?></h2>
-                <p><a href="<?php the_permalink()?>" class="button gaHero">View Issue</a></p>
-                <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero" download>Download PDF</a></p>
+                <h2 class="issueTitle"><?php the_title();?></h2>
+                <p><a href="<?php the_permalink()?>" class="button gaHero buttonCenter">View Issue</a></p>
+                <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero buttonCenter" download>Download PDF</a></p>
                 <?php
                 $count++;
                 ?></div></a><?php
                 if ($count <= 3) {
-                  ?><div class="three columns story"><?php
+                  ?><div class="three columns "><?php
                 }
               }
               elseif ($count > 3) {
@@ -43,12 +43,12 @@ get_header();
                 ?>
                 </div>
                 <div class="row">
-                  <div class="three columns story">
+                  <div class="three columns ">
                     <a href="<?php the_permalink()?>"> <?php
                       the_post_thumbnail();?>
                     <h3 class="redBackgroundHeading"><?php the_title();?></h3>
-                    <p><a href="<?php the_permalink()?>" class="button gaHero">View Issue</a></p>
-                    <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero" download>Download PDF</a></p>
+                    <p><a href="<?php the_permalink()?>" class="button gaHero buttonCenter">View Issue</a></p>
+                    <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero buttonCenter" download>Download PDF</a></p>
                   <?php
                   $count++;
                   ?></div></a><?php

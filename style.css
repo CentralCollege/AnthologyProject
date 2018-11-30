@@ -25,16 +25,10 @@ a {
   border: solid 1px #cb2026;
 }
 
-.size-post-thumbnail {
-    width:100%;
+.size-post-thumbnail{
+    width: 100%;
     overflow: hidden;
     object-fit: cover;
-}
-@media (max-width: 1160px){
-  .size-post-thumbnail {
-    /* display: none; */
-  }
-
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
