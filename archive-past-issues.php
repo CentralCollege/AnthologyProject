@@ -30,8 +30,7 @@ get_header();
                 ?>
                 <h2><?php the_title();?></h2>
                 <p><a href="<?php the_permalink()?>" class="button gaHero">View Issue</a></p>
-                <p><a href="" class="button gaHero">Download PDF</a></p>
-                <h5><?php echo get_field( "pdf_version" ); ?> </h5>
+                <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero" download>Download PDF</a></p>
                 <?php
                 $count++;
                 ?></div></a><?php
@@ -49,7 +48,7 @@ get_header();
                       the_post_thumbnail();?>
                     <h3 class="redBackgroundHeading"><?php the_title();?></h3>
                     <p><a href="<?php the_permalink()?>" class="button gaHero">View Issue</a></p>
-                    <p><a href="" class="button gaHero">Download PDF</a></p>
+                    <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero" download>Download PDF</a></p>
                   <?php
                   $count++;
                   ?></div></a><?php
