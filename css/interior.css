@@ -8,7 +8,19 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 
+.featuredPhotoHeader{
+  margin-top: 1rem;
+  width: 100%;
+  overflow: hidden;
+  max-height: 300px;
+}
 
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
+  width: 100%;
+  height: auto;
+  margin-top: -50%;
+  overflow: hidden;
+}
 
 img.issueCoverImage.wp-post-image {
   max-width: 100%;
@@ -24,8 +36,9 @@ img.issueCoverImage.wp-post-image {
 
 }
 
-a.buttonHero.gaHero.buttonCenter {
-  text-align: center;
+a.button.gaHero.buttonCenter {
+  text-align: right;
+  text-decoration: none;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {

@@ -21,8 +21,18 @@ a {
 }
 
 .story {
-  /* margin: 2rem 0 0 1rem; */
-  border: solid 1px #cb2026;
+   margin-bottom: 2rem;
+   text-align: left;
+  /* border: solid 1px #cb2026; */
+}
+
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
+  width: 200px;
+  height: 200px;
+}
+
+.authorName {
+   text-align: center;
 }
 
 .size-post-thumbnail{

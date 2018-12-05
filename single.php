@@ -16,12 +16,15 @@ get_header();
 <section class="container sectionPaddingSmall">
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
-      <div id="featuredImage" style="align-items:center;">
+      <div class="twelve columns featuredPhotoHeader">
         <?php the_post_thumbnail();?>
       </div>
-      <h2><?php echo get_the_title();?></h2>
-      <h5 style="float:left; align:left;">By <?php echo get_field( "student_author" ); ?></h5>
-      <h5 style="float:right; align:right;"><?php echo get_field( "class_name_" ); ?> </h5>
+      <div style="clear:both;"></div>
+      <div>
+        <h2><?php echo get_the_title();?></h2>
+        <h5 style="float:left; align:left;">By <?php echo get_field( "student_author" ); ?></h5>
+        <h5 style="float:right; align:right;"><?php echo get_field( "class_name_" ); ?> </h5>
+      </div>
       <div style="clear:both;"></div>
       <strong><p style="text-align:center;"><?php echo get_field( "authors_note" ); ?></p></strong>
       <?php the_content();

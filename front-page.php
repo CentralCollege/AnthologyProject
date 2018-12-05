@@ -107,7 +107,7 @@
 									<?php
 									$count++;
 					        //the_excerpt();
-									echo get_field( "student_author" );
+									the_field('student_author');
 					        $title = the_title('','',false);
 									$eventID = get_post_meta($post->ID, 'eventID', true);
 					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
@@ -129,8 +129,7 @@
 											<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
 										<?php
 										$count++;
-						        //the_excerpt();
-										echo get_field( "student_author" );
+						        the_field('student_author');
 						        $title = the_title('','',false);
 										$eventID = get_post_meta($post->ID, 'eventID', true);
 						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
