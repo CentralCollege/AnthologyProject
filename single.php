@@ -9,10 +9,10 @@ get_header();
 <section class="graySection sectionPaddingSmall">
   <div class="container">
     <div class="twelve columns">
-      <h1><?php bloginfo('title');?> - 2018</h1>
-    </div>
-  </div>
-</section>
+      <h1><?php bloginfo('title');?> -</h1>
+        </div>
+      </div>
+    </section>
 <section class="container sectionPaddingSmall">
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>

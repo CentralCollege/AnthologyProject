@@ -16,6 +16,8 @@ add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
 add_image_size( 'issue-cover', 175, 375, true );
 
+@ini_set( 'upload_max_size' , '6M' );
+
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
 function my_toolbars( $toolbars )
 {
