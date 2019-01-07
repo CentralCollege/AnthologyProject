@@ -7,8 +7,7 @@
 		<meta name="description" content="Central College Writing Anthology Site" />
     <meta name="Keywords" content="Central College; Writing Anthology" />
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
-		<link href='<?php echo get_stylesheet_directory_uri() ?>/external-libraries/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-    <link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<style type="text/css">
 			@media (min-width: 550px) {
 				.hero{
@@ -172,7 +171,7 @@
 					<div class="four columns">
 						<p><a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/main/footerLogo.png" alt="Central College Gray Logo"></a></p>
 						<div class="social-icons">
-							<a href="http://www.facebook.com/centralcollege/"><i class="fa fa-2x fa-facebook-official" title="Central College Facebook"></i><span class="wahide">Facebook</span></a>
+							<a href="http://www.facebook.com/centralcollege/"><i class="fas fa-facebook-official" title="Central College Facebook"></i><span class="wahide">Facebook</span></a>
         			<a href="http://twitter.com/centralcollege/"><i class="fa fa-2x fa-twitter" title="Central College Twitter"></i><span class="wahide">Twitter</span></a>
         			<a href="http://instagram.com/centralcollege"><i class="fa fa-2x fa-instagram" title="Central College Instagram"></i><span class="wahide">Instagram</span></a>
         			<a href="http://youtube.com/centralcollegeadm"><i class="fa fa-2x fa-youtube-square" title="Central College youTube"></i><span class="wahide">youTube</span></a>
