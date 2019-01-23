@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="en">
-		<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="initial-scale=1.0,width=device-width" />
-		<title>Writing Anthology - Central College</title>
-		<meta name="description" content="Central College Writing Anthology Site" />
-    <meta name="Keywords" content="Central College; Writing Anthology" />
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<style type="text/css">
-			@media (min-width: 550px) {
-				.hero{
-					text-align: center;
-				}
+	<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width" />
+	<title>Writing Anthology - Central College</title>
+	<meta name="description" content="Central College Writing Anthology Site" />
+	<meta name="Keywords" content="Central College; Writing Anthology" />
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_stylesheet_directory_uri() ?>/external-libraries/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css">
+	<style type="text/css">
+		@media (min-width: 550px) {
+			.hero{
+				text-align: center;
 			}
-		</style>
+		}
+	</style>
 		<?php if ($_SERVER['HTTP_HOST'] == '192.168.56.111'){?>
 			<script src="//localhost:35729/livereload.js"></script>
 		<?php } ?>
