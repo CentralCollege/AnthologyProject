@@ -84,6 +84,7 @@
           <div class="twelve columns">
             <h1>The Writing Anthology - <?php the_title(); ?></h1>
 						<h3>A Publication of the English Department and the Art Department</h3>
+						<h5>THIS SHOULD ONLY DISPLAY WHEN VIEWING A SINGLE ISSUE</h5>
 						<p><a href="/writing-anthology/" class="button gaHero">Home</a><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
 						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
@@ -94,56 +95,62 @@
 					<div class="row">
 					  <div class="three columns story">
 					    <?php
-              if (get_post_type() == 'pastissues') {
-  							if (have_posts()) : while (have_posts()) : the_post(); ?>
-  					      <?php
-  								if ($count <= 3){
-  									?><a href="<?php the_permalink()?>"> <?php
-  									if ( has_post_thumbnail() ) {
-  										the_post_thumbnail();
-  									}
-  									?>
-  									<h5 class="redBackgroundHeading"><?php the_title(); ?></h5>
-  									<?php
-  									$count++;
-  					        //the_excerpt();
-  									the_field('student_author');
-  					        $title = the_title('','',false);
-  									$eventID = get_post_meta($post->ID, 'eventID', true);
-  					        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-  									?></div></a><?php
-  									if ($count <= 3) {
-  										?><div class="three columns story"><?php
-  									}
-  								}
-  								elseif ($count > 3) {
-  									$count = 0;
-  									?>
-  									</div>
-  									<div class="row">
-  										<div class="three columns story">
-  											<a href="<?php the_permalink()?>"> <?php
-  											if ( has_post_thumbnail() ) {
-  												the_post_thumbnail();
-  											} ?>
-  											<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
-  										<?php
-  										$count++;
-  						        the_field('student_author');
-  						        $title = the_title('','',false);
-  										$eventID = get_post_meta($post->ID, 'eventID', true);
-  						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-  										?></div></a><?php
-  										if ($count <= 2) {
-  											?><div class="three columns"><?php
-  										}
-  								}
-  					        endwhile;
-  								endif;
-                }
-								?>
-					      </div>
-								<div class="clearBoth"></div>
+								$count = 0;
+								$args = array( 'past-issues' => get_the_title() );
+								// The Query
+								$the_query = new WP_Query( $args );
+								// The Loop
+								if ( $the_query->have_posts() ) {
+								  while ( $the_query->have_posts() ) {
+								    $the_query->the_post();
+										if ($count <= 3){
+											?><a href="<?php the_permalink()?>"> <?php
+											if ( has_post_thumbnail() ) {
+												the_post_thumbnail();
+											}
+											?>
+											<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
+											<?php
+											$count++;
+							        //the_excerpt();
+											the_field('student_author');
+							        $title = the_title('','',false);
+											$eventID = get_post_meta($post->ID, 'eventID', true);
+							        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
+											?></div></a><?php
+											if ($count <= 3) {
+												?><div class="three columns story"><?php
+											}
+										}
+										elseif ($count > 3) {
+											$count = 0;
+											?>
+											</div>
+											<div class="row">
+												<div class="three columns story">
+													<a href="<?php the_permalink()?>"> <?php
+													if ( has_post_thumbnail() ) {
+														the_post_thumbnail();
+													} ?>
+													<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
+												<?php
+												$count++;
+								        the_field('student_author');
+								        $title = the_title('','',false);
+												$eventID = get_post_meta($post->ID, 'eventID', true);
+								        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
+												?></div></a><?php
+												if ($count <= 2) {
+													?><div class="three columns"><?php
+												}
+										}
+								  }
+								} else {
+								  // no posts found
+								}
+							?>
+			      </div>
+						<div class="clearBoth"></div>
 					</div>
 				</div>
 			</section>
