@@ -84,8 +84,7 @@
           <div class="twelve columns">
             <h1>The Writing Anthology - <?php the_title(); ?></h1>
 						<h3>A Publication of the English Department and the Art Department</h3>
-						<h5>THIS SHOULD ONLY DISPLAY WHEN VIEWING A SINGLE ISSUE</h5>
-						<p><a href="/writing-anthology/" class="button gaHero">Home</a><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
+						<p><a href="/writing-anthology/" class="button gaHero">Home</a><a href="/writing-anthology/past-issues/" class="button gaHero">Issues</a></p>
 						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
       </section>

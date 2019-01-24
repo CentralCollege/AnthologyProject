@@ -9,13 +9,13 @@ get_header();
 <section class="graySection sectionPaddingSmall">
   <div class="container">
     <div class="twelve columns">
-      <h1><?php bloginfo('title');?></h1>
+      <h1><a href="/writing-anthology/" style="text-decoration:none;"><?php bloginfo('title'); ?> </a></h1>
     </div>
   </div>
 </section>
 <section class="container sectionPaddingSmall">
   <div class="twelve columns page-content">
-    <h2>Past Issues</h2>
+    <h2>Issues</h2>
     <section class="whiteSection sectionPadding">
       <div class="container">
         <div class="row">

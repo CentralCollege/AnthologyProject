@@ -84,7 +84,7 @@
           <div class="twelve columns">
             <h1>The Writing Anthology</h1>
 						<h3>A Publication of the English Department and the Art Department</h3>
-						<p><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
+						<p><a href="/writing-anthology/past-issues/" class="button gaHero">Issues</a></p>
 						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
       </section>
