@@ -15,7 +15,7 @@ get_header();
 </section>
 <section class="container sectionPaddingSmall">
   <div class="twelve columns page-content">
-    <h2>Issues</h2>
+    <h2>Past Issues</h2>
     <section class="whiteSection sectionPadding">
       <div class="container">
         <div class="row">
