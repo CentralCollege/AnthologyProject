@@ -84,7 +84,7 @@
           <div class="twelve columns">
             <h1>The Writing Anthology - <?php the_title(); ?></h1>
 						<h3>A Publication of the English Department and the Art Department</h3>
-						<p><a href="/writing-anthology/" class="button gaHero">Home</a><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
+						<p><a href="/writing-anthology/about/" class="button gaHero">About</a><a href="/writing-anthology/" class="button gaHero">Home</a><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
 						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
       </section>
