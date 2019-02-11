@@ -14,7 +14,7 @@ function cui_add_styles() {
 add_action( 'wp_enqueue_scripts', 'cui_add_styles' );
 add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
-add_image_size( 'issue-cover', 175, 375, true );
+add_image_size( 'issue-cover', 260, 330, true );
 
 // @ini_set( 'upload_max_size' , '6M' );
 

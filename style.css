@@ -35,6 +35,11 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
    text-align: center;
 }
 
+.issueCoverImage{
+    height: 375px !important;
+    width: 175px !important;
+}
+
 .size-post-thumbnail{
     width: 100%;
     overflow: hidden;

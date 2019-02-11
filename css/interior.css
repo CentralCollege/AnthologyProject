@@ -25,7 +25,8 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
 img.issueCoverImage.wp-post-image {
   max-width: 100%;
   height: auto;
-  /* overflow: auto; */
+  /* height: 375px !important;
+  width: 175px !important; */
 }
 
 .issueTitle, .issueTitle:link, .issueTitle:active, .issueTitle:visited{
