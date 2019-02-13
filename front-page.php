@@ -7,7 +7,7 @@
 		<meta name="description" content="Central College Writing Anthology Site" />
     <meta name="Keywords" content="Central College; Writing Anthology" />
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
-		<link href='<?php echo get_stylesheet_directory_uri() ?>/external-libraries/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css">
 		<style type="text/css">
 			@media (min-width: 550px) {
@@ -152,34 +152,30 @@
 					<div class="four columns">
 						<h3>I'm looking for</h3>
 						<ul>
-							<li><a href="https://central.textbookx.com/">Bookstore</a></li>
-							<li><a href="/campus-map">Campus Map</a></li>
-							<li><a href="/job-seekers">Careers</a></li>
-							<li><a href="https://departments.central.edu/diningservices/catering/">Catering Services</a></li>
-							<li><a href="https://www.centralspiritshoppe.com/">Central Spirit Shoppe</a></li>
-							<li><a href="/event-planners/">Conferences and Events</a></li>
-							<li><a href="/library">Library</a></li>
-							<li><a href="https://news.central.edu">News</a></li>
-							<li><a href="/campus-life/safety-at-central/">Safety</a></li>
-						</ul>
+			        <li><a href="http://central.textbookx.com/">Bookstore</a></li>
+			        <li><a href="/campus-map">Campus Map</a></li>
+			        <li><a href="/job-seekers">Careers</a></li>
+			        <li><a href="//departments.central.edu/diningservices/catering/">Catering Services</a></li>
+			        <li><a href="https://www.centralspiritshoppe.com/">Central Spirit Shoppe</a></li>
+			        <li><a href="http://events.central.edu/" target="_blank">Events</a></li>
+			        <li><a href="/library">Library</a></li>
+			        <li><a href="//news.central.edu">News</a></li>
+			        <li><a href="/campus-life/safety-at-central/">Safety</a></li>
+			      </ul>
 					</div>
 					<div class="four columns">
 						<h3>Contact Us</h3>
 						<p>Central College<br />812 University St.<br />Pella, Iowa 50219</p>
-						<p>1-800-447-0287<br /><a href="mailto:alumni@central.edu">alumni@central.edu</a></p>
-					</div>
-					<div class="four columns">
-						<p><a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/main/footerLogo.png" alt="Central College Gray Logo"></a></p>
-						<div class="social-icons">
-							<a href="http://www.facebook.com/centralcollege/"><i class="fa fa-2x fa-facebook-official" title="Central College Facebook"></i><span class="wahide">Facebook</span></a>
-        			<a href="http://twitter.com/centralcollege/"><i class="fa fa-2x fa-twitter" title="Central College Twitter"></i><span class="wahide">Twitter</span></a>
-        			<a href="http://instagram.com/centralcollege"><i class="fa fa-2x fa-instagram" title="Central College Instagram"></i><span class="wahide">Instagram</span></a>
-        			<a href="http://youtube.com/centralcollegeadm"><i class="fa fa-2x fa-youtube-square" title="Central College youTube"></i><span class="wahide">youTube</span></a>
+						<p>877-462-3687<br /><a href="mailto:admission@central.edu">admission@central.edu</a></>
+	    </div>
+						<div class="four columns">
+							<a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/main/footerLogo.png" alt="Central College" width="125" height="66" class="footerLogo"></a>
+							<p class="alignCenter socialIcons"><a href="https://www.facebook.com/CentralCollege"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i> <span class="sr-only">Central College Facebook</span></a> <a href="https://twitter.com/CentralCollege"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i> <span class="sr-only">Central College Twitter</span></a> <a href="https://instagram.com/centralcollege"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i><span class="sr-only">Central College Instagram</span></a> <a href="http://www.youtube.com/user/centralcollegeadm"><i class="fa fa-2x fa-youtube-square" aria-hidden="true"></i> <span class="sr-only">Central College youTube</span></a></p>
+							<p class="alignCenter"><a href="/policies/policy/678">Privacy Policy</a></p>
 						</div>
-						<p><a href="https://webapps.central.edu/policies/policy/678">Privacy Policy</a></p>
+						<div class="clearBoth"></div></div>
 					</div>
-				</div>
-			</footer>
+				</footer>
 
 			<script src="<?php echo get_stylesheet_directory_uri() ?>/js/homepage.min.js"></script>
 </body>

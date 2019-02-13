@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     		<meta name="viewport" content="initial-scale=1.0,width=device-width" />
         <link rel="shortcut icon" href="//d1lqhpmxg10s5j.cloudfront.net/favicon.ico" />
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 				<?php wp_head();?>
 				<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
