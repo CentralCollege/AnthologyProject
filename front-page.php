@@ -135,7 +135,7 @@
 						        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
 										?></div></a><?php
 										if ($count <= 2) {
-											?><div class="three columns"><?php
+											?><div class="three columns story"><?php
 										}
 								}
 					        endwhile;

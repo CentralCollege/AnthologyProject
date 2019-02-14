@@ -4,7 +4,7 @@ Theme URI:    http://www.central.edu/writing-anthology
 Description:  Central College Writing Anthology Theme
 Author:       Jacob Oyen (feat. Andrew Gorman)
 Template:     central-college-parent
-Version:      1.1.8
+Version:      2
 */
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
@@ -22,13 +22,16 @@ a {
 
 .story {
    margin-bottom: 2rem;
-   text-align: left;
+   text-align: center;
+   align-items: center;
   /* border: solid 1px #cb2026; */
 }
 
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .authorName {
