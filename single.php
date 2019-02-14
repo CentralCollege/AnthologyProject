@@ -22,20 +22,25 @@ get_header();
       <div style="clear:both;"></div>
       <div>
         <h2><?php echo get_the_title();?></h2>
-        <h5 style="float:left; align:left;">By <?php echo get_field( "student_author" ); ?></h5>
-        <h5 style="float:right; align:right;"><?php echo get_field( "class_name_" ); ?> </h5>
+        <?php if( get_field( "student_author" ) ) {
+          ?><h5 style="float:left; align:left;">By <?php echo get_field( "student_author" );
+        } ?></h5>
+        <?php if( get_field( "class_name_" ) ) {
+          ?><h5 style="float:right; align:right;"><?php echo get_field( "class_name_" );
+        } ?></h5>
       </div>
       <div style="clear:both;"></div>
       <strong><p style="text-align:center;"><?php echo get_field( "authors_note" ); ?></p></strong>
       <?php the_content();
       ?>
-      <h3>Works Cited</h3>
-      <strong><p style="text-align:left;"><?php echo get_field( "works_cited" ); ?></p></strong>
+      <?php if( get_field( "works_cited" ) ) {
+        ?><h3>Works Cited</h3> <strong><p style="text-align:left;"><?php echo get_field( "works_cited" ); ?></p></strong>
+      <?php } ?>
     </div>
     <div class="three columns">
       <div class="secondaryNav">
       <ul>
-        <li class="sectionNavTitle"><a href="/alumni"><?php bloginfo('title');?> home</a></li>
+        <li class="sectionNavTitle"><a href="/writing-anthology"><?php bloginfo('title');?> home</a></li>
       </ul>
       <?php
       $args = array(

@@ -32,7 +32,7 @@
 		<body>
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP42LCH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<nav id="menu" style="display: none;">
-				<span class="closeNav"><i class="fa fa-lg fa-window-close" aria-hidden="true"></i></span>
+				<span class="closeNav"><i class="fab fa-lg fa-window-close" aria-hidden="true"></i></span>
 				<h1><?php echo get_bloginfo('name');?></h1>
 				<ul>
 					<li class="menu-item"><a href="http://www.central.edu">Central College Homepage</a></li>
@@ -59,9 +59,9 @@
 				}
 					?>
 				<ul class="applyGive list-group">
-					<li class="list-group-item"><a href="/admission/apply/" onclick="_gaq.push(['_trackEvent', 'Sitewide Apply', 'Click', 'Apply']);"><i class="fa fa-check-circle-o fa-lg fa-fw"></i> I want to apply!</a></li>
-					<li class="list-group-item"><a href="/alumni/ways-to-give/online/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Ways To Give', 'Click', 'Ways to Give']);"><i class="fa fa-usd fa-lg fa-fw"></i> Give to Central</a></li>
-					<li class="list-group-item"><a href="/event-planners/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Plan an Event', 'Click', 'Plan an Event']);"><i class="fa fa-calendar fa-lg fa-fw"></i> Plan an event</a></li>
+					<li class="list-group-item"><a href="/admission/apply/" onclick="_gaq.push(['_trackEvent', 'Sitewide Apply', 'Click', 'Apply']);"><i class="fab fa-check-circle-o fa-lg fa-fw"></i> I want to apply!</a></li>
+					<li class="list-group-item"><a href="/alumni/ways-to-give/online/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Ways To Give', 'Click', 'Ways to Give']);"><i class="fab fa-usd fa-lg fa-fw"></i> Give to Central</a></li>
+					<li class="list-group-item"><a href="/event-planners/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Plan an Event', 'Click', 'Plan an Event']);"><i class="fab fa-calendar fa-lg fa-fw"></i> Plan an event</a></li>
 				</ul>
 			</nav>
 			<main id="panel">
