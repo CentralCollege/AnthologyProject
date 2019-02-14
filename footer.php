@@ -2,7 +2,7 @@
 <footer>
   <div class="container">
     <div class="four columns">
-      <h3>I'm looking for</h3>
+      <h3 class="footerLabel">I'm looking for</h3>
       <ul>
         <li><a href="http://central.textbookx.com/">Bookstore</a></li>
         <li><a href="/campus-map">Campus Map</a></li>
@@ -16,7 +16,7 @@
       </ul>
     </div>
     <div class="three columns offset-by-one">
-      <h3>Contact Us</h3>
+      <h3 class="footerLabel">Contact Us</h3>
       <p>Central College<br />812 University St.<br />Pella, Iowa 50219</p>
       <p>877-462-3687<br /><a href="mailto:admission@central.edu">admission@central.edu</a></>
 </div>
