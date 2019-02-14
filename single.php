@@ -9,7 +9,7 @@ get_header();
 <section class="graySection sectionPaddingSmall">
   <div class="container">
     <div class="twelve columns">
-      <h1><?php bloginfo('title');?> -</h1>
+      <h1><?php bloginfo('title');?></h1>
         </div>
       </div>
     </section>

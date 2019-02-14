@@ -1,13 +1,13 @@
 {
-  "name": "wpt-alumni",
-  "description": "WordPress template for the alumni section of the Central Website",
+  "name": "wpt-writing-anthology",
+  "description": "WordPress template for the writing-anthology section of the Central Website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CentralCollege/wpt-financial-aid"
+    "url": "https://github.com/CentralCollege/wpt-writing-anthology"
   },
   "scripts": {
     "start": "grunt",
-    "test": "axe 192.168.56.111/alumni --exit"
+    "test": "axe 192.168.56.111/writing-anthology --exit"
   },
   "version": "0.0.1",
   "devDependencies": {

@@ -1,7 +1,7 @@
 <h2 style="font-size: 1.75em; margin-bottom: 1em;">Who's coming</h2>
 <?php
 
-if (isset($_SERVER['HTTP_REFERER']) && ($_SERVER['HTTP_REFERER'] = 'http://192.168.56.111/alumni/events/' || $_SERVER['HTTP_REFERER'] = 'https://new.central.edu/alumni/events/' || $_SERVER['HTTP_REFERER'] = 'https://www.central.edu/alumni/events/')){
+if (isset($_SERVER['HTTP_REFERER']) && ($_SERVER['HTTP_REFERER'] = 'http://192.168.56.111/writing-anthology/events/' || $_SERVER['HTTP_REFERER'] = 'https://new.central.edu/writing-anthology/events/' || $_SERVER['HTTP_REFERER'] = 'https://www.central.edu/writing-anthology/events/')){
   if (isset($_GET['ID']) && strlen($_GET['ID']) > 0 ){
 
   $args = array(

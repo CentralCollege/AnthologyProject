@@ -22,7 +22,7 @@ get_header();
     <div class="three columns">
       <div class="secondaryNav">
       <ul>
-        <li class="sectionNavTitle"><a href="/alumni"><?php bloginfo('title');?> home</a></li>
+        <li class="sectionNavTitle"><a href="/writing-anthology"><?php bloginfo('title');?> home</a></li>
       </ul>
       <?php
       $args = array(
