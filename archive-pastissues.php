@@ -19,7 +19,7 @@ get_header();
     <section class="whiteSection sectionPadding">
       <div class="container">
         <div class="row">
-          <div class="three columns ">
+          <div class="three columns issueListing">
             <?php
             $count = 0;
             if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -36,7 +36,7 @@ get_header();
                 $count++;
                 ?></div></a><?php
                 if ($count <= 3) {
-                  ?><div class="three columns "><?php
+                  ?><div class="three columns issueListing"><?php
                 }
               }
               elseif ($count > 3) {

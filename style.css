@@ -96,8 +96,23 @@ table {
     padding: 0
   }
 }
-
-@media (min-width:550px) {
+@media (max-width:750px){
+  .centerFooter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .four.columns{
+    text-align: center;
+  }
+  .three.columns{
+    text-align: center;
+  }
+}
+@media (min-width:750px) {
+  .story{
+    text-align: left;
+  }
   .container {
     width: 80%
   }
@@ -265,11 +280,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3em
+  font-size: 3em;
+  text-align: center;
 }
 
 h2 {
-  font-size: 2em
+  font-size: 2em;
 }
 
 .desktopMenu {

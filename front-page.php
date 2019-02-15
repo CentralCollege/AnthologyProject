@@ -146,8 +146,8 @@
 					</div>
 				</div>
 			</section>
-
-			<footer>
+<?php get_footer();?>
+			<!-- <footer>
 				<div class="container">
 					<div class="four columns">
 						<h3>I'm looking for</h3>
@@ -178,7 +178,7 @@
 						</div>
 						<div class="clearBoth"></div></div>
 					</div>
-				</footer>
+				</footer> -->
 
 			<script src="<?php echo get_stylesheet_directory_uri() ?>/js/homepage.min.js"></script>
 </body>

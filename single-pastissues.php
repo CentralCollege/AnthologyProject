@@ -7,7 +7,7 @@
 	<meta name="description" content="Central College Writing Anthology Site" />
 	<meta name="Keywords" content="Central College; Writing Anthology" />
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:700|Raleway:800' rel='stylesheet' type='text/css'>
-	<link href='<?php echo get_stylesheet_directory_uri() ?>/external-libraries/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet' type="text/css">
 	<style type="text/css">
 		@media (min-width: 550px) {
@@ -140,7 +140,7 @@
 								        $urlOverride = get_post_meta($post->ID, 'urlOverride', true);
 												?></div></a><?php
 												if ($count <= 2) {
-													?><div class="three columns"><?php
+													?><div class="three columns story"><?php
 												}
 										}
 								  }
@@ -153,8 +153,8 @@
 					</div>
 				</div>
 			</section>
-
-			<footer>
+			<?php get_footer();?>
+			<!-- <footer>
 				<div class="container">
 					<div class="four columns">
 						<h3>I'm looking for</h3>
@@ -186,7 +186,7 @@
 						<p><a href="https://webapps.central.edu/policies/policy/678">Privacy Policy</a></p>
 					</div>
 				</div>
-			</footer>
+			</footer> -->
 
 			<script src="<?php echo get_stylesheet_directory_uri() ?>/js/homepage.min.js"></script>
 </body>

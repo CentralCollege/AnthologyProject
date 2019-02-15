@@ -1,6 +1,6 @@
 </main>
 <footer>
-  <div class="container">
+  <div class="container centerFooter">
     <div class="four columns">
       <h3 class="footerLabel">I'm looking for</h3>
       <ul>

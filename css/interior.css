@@ -82,7 +82,19 @@ table {
   float: left;
   box-sizing: border-box
 }
-
+@media (max-width:750px){
+  .centerFooter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .four.columns{
+    text-align: center;
+  }
+  .three.columns{
+    text-align: center;
+  }
+}
 @media (min-width:400px) {
   .container {
     width: 85%;
@@ -90,7 +102,19 @@ table {
   }
 }
 
-@media (min-width:550px) {
+@media (min-width:750px) {
+
+  .issueListing{
+    text-align: left;
+    display: inline-block;
+    margin-left: 4% !important;
+    margin-right: auto;
+  }
+
+  a.button.gaHero.buttonCenter{
+    font-size: 1em;
+  }
+
   .container {
     width: 80%
   }
@@ -389,6 +413,18 @@ a#logo {
   nav.primary {
     display: block
   }
+
+  .issueListing{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a.button.gaHero.buttonCenter{
+    font-size: 1.5em;
+  }
+
 }
 
 nav.primary {
