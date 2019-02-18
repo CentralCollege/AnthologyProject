@@ -17,8 +17,8 @@
     </div>
     <div class="three columns offset-by-one">
       <h3 class="footerLabel">Contact Us</h3>
-      <p>Central College<br />812 University St.<br />Pella, Iowa 50219</p>
-      <p>877-462-3687<br /><a href="mailto:admission@central.edu">admission@central.edu</a></>
+      <p><a href="https://goo.gl/maps/osB126XAVZU2" target="_blank" >Central College<br />812 University St.<br />Pella, Iowa 50219</a></p>
+      <p><a href="tel:1-877-462-3687">877-462-3687</a><br /><a href="mailto:admission@central.edu">admission@central.edu</a></>
 </div>
       <div class="four columns">
         <a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/main/footerLogo.png" alt="Central College" width="125" height="66" class="footerLogo"></a>
@@ -47,8 +47,8 @@
         </div>
         <div class="six columns">
           <h3 class="footerLabel">Contact Us</h3>
-          <p>Central College<br />812 University St.<br />Pella, Iowa 50219</p>
-          <p>877-462-3687<br /><a href="mailto:admission@central.edu">admission@central.edu</a></p>
+          <p><a href="https://goo.gl/maps/osB126XAVZU2" target="_blank" >Central College<br />812 University St.<br />Pella, Iowa 50219</a></p>
+          <p><a href="tel:1-877-462-3687">877-462-3687</a><br /><a href="mailto:admission@central.edu">admission@central.edu</a></p>
         </div>
         </div>
         <div class="row">
