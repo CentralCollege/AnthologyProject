@@ -7,6 +7,13 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline
 }
 
+.mobileFooter{
+  display: none;
+}
+
+.desktopFooter{
+  display: block;
+}
 
 .featuredPhotoHeader{
   margin-top: 1rem;
@@ -83,11 +90,31 @@ table {
   box-sizing: border-box
 }
 @media (max-width:750px){
-  .centerFooter{
+  .mobileFooter{
     display: block;
+  }
+
+  .desktopFooter{
+    display: none;
+  }
+
+  .centerFooter{
+    /* display: block; */
     margin-left: auto;
     margin-right: auto;
   }
+
+  .six.columns{
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .twelve.columns{
+    padding-top: 1.5em;
+    align-items: center;
+    text-align: center;
+  }
+  
   .four.columns{
     text-align: center;
   }

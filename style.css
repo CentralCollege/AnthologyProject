@@ -15,6 +15,14 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline
 }
 
+.mobileFooter{
+  display: none;
+}
+
+.desktopFooter{
+  display: block;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -97,8 +105,27 @@ table {
   }
 }
 @media (max-width:750px){
-  .centerFooter{
+  .mobileFooter{
     display: block;
+  }
+
+  .desktopFooter{
+    display: none;
+  }
+
+  .six.columns{
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .twelve.columns{
+    padding-top: 1.5em;
+    align-items: center;
+    text-align: center;
+  }
+
+  .centerFooter{
+    /* display: block; */
     margin-left: auto;
     margin-right: auto;
   }
