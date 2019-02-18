@@ -15,6 +15,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   display: block;
 }
 
+footer{
+  padding-bottom: 2em;
+}
+
 .featuredPhotoHeader{
   margin-top: 1rem;
   width: 100%;
@@ -114,7 +118,7 @@ table {
     align-items: center;
     text-align: center;
   }
-  
+
   .four.columns{
     text-align: center;
   }
