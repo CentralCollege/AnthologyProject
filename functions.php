@@ -47,7 +47,50 @@ function my_toolbars( $toolbars )
 	// return $toolbars - IMPORTANT!
 	return $toolbars;
 }
-
+// -----------------------------------------------------------
+// Adds breadcumbs. When this becomes a child them this can be removed and use the global function central_breadcrumbs();
+// -----------------------------------------------------------
+function anthology_breadcrumbs() {
+		$delimiter = '/';
+		$currentBefore = '<span class="active_breadcrumb">';
+		$currentAfter = '</span>';
+		if ( !is_home() && !is_front_page() || is_paged() ) {
+			global $post;
+			echo '<a href="/">home</a> ' . $delimiter . ' <a href="' . get_bloginfo('url') . '">' . get_bloginfo('title') . '</a> ' . $delimiter . ' ';
+			if ( is_single() ) {
+			  $cat = get_the_category(); $cat = $cat[0];
+			  // echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+        $taxonomyTerms = get_the_terms( $post->ID, 'issue' );
+        if ($taxonomyTerms) {
+            foreach($taxonomyTerms as $taxonomyTerm) {
+              echo '<a href="/writing-anthology/pastIssues/' . $taxonomyTerm->name . '/"> ' . $taxonomyTerm->name . ' ' . '</a>' . $delimiter . ' ' ;
+            }
+        }
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			}
+			elseif ( is_page() && !$post->post_parent ) {
+			  echo $currentBefore;
+			  the_title();
+			  echo $currentAfter;
+			}
+			elseif ( is_page() && $post->post_parent ) {
+			  $parent_id  = $post->post_parent;
+			  $breadcrumbs = array();
+			  while ($parent_id) {
+				$page = get_page($parent_id);
+				$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+				$parent_id  = $page->post_parent;
+			  }
+			$breadcrumbs = array_reverse($breadcrumbs);
+			foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+			echo $currentBefore;
+			the_title();
+			echo $currentAfter;
+			}
+		}
+	}
 // ------------------------------------------------------------------------
 // Custom post type for Anthology Issues
 // ------------------------------------------------------------------------
