@@ -21,7 +21,6 @@ get_header();
 
       get_post_meta($post_id, 'student_author', $single);
 ?>
-<p>test</p>
     </div>
     <div class="three columns">
       <div class="secondaryNav">

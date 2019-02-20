@@ -56,7 +56,7 @@ function anthology_breadcrumbs() {
 		$currentAfter = '</span>';
 		if ( !is_home() && !is_front_page() || is_paged() ) {
 			global $post;
-			echo '<a href="/">home</a> ' . $delimiter . ' <a href="' . get_bloginfo('url') . '">' . get_bloginfo('title') . '</a> ' . $delimiter . ' ';
+			echo ' <a href="' . get_bloginfo('url') . '">' . get_bloginfo('title') . '</a> ' . $delimiter . ' ';
 			if ( is_single() ) {
 			  $cat = get_the_category(); $cat = $cat[0];
 			  // echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
