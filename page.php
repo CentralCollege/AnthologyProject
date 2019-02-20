@@ -4,7 +4,7 @@ get_header();
 <section class="graySection">
   <div class="container">
     <div class="twelve columns">
-      <h1><?php bloginfo('title');?></h1>
+      <h1><a href="/writing-anthology/" style="text-decoration:none;"><?php bloginfo('title'); ?> </a></h1>
     </div>
   </div>
 </section>

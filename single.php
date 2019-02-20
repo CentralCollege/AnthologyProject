@@ -9,7 +9,7 @@ get_header();
 <section class="graySection sectionPaddingSmall">
   <div class="container">
     <div class="row">
-      <h1 class="twelve columns"><?php bloginfo('title');?></h1>
+      <h1><a href="/writing-anthology/" style="text-decoration:none;"><?php bloginfo('title'); ?> </a></h1>
     </div>
   </div>
 </section>
