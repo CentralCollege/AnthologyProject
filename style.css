@@ -23,6 +23,23 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   display: block;
 }
 
+.singlePostImage{
+    max-width: 400px;
+    max-height: 400px;
+    height: auto !important;
+    width: 100% !important;
+    margin: 1em;
+}
+
+.nine.columns{
+  padding-left: .5em;
+}
+
+.studentAuthor{
+  margin-top: 4px;
+  font-size: 1.5em;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -300,19 +317,87 @@ html {
   font-weight: 400
 }
 
-h1, h2, h3, h4, h5 {
+h1{
   text-transform: uppercase;
   font-family: Raleway, sans-serif;
-  margin: .75em 0
-}
-
-h1 {
+  margin: .75em 0;
   font-size: 3em;
   text-align: center;
 }
 
 h2 {
   font-size: 2em;
+}
+
+h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  margin: .75em 0;
+  color: #cb2026
+}
+
+h2, h3 {
+  background-color: #efefef;
+  padding: .25em
+}
+
+.secondaryNav {
+  background-color: #cb2026;
+  font-size: .8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: #fff;
+  border: 1px solid #cb2026
+}
+
+.secondaryNav ul li {
+  display: block;
+  border-bottom: 1px solid #fff
+}
+
+.secondaryNav ul li:last-child {
+  border-bottom: none
+}
+
+.secondaryNav a:link, .secondaryNav a:visited {
+  padding: 1em .33em;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase
+}
+
+.secondaryNav a:hover {
+  background-color: #fff;
+  color: #cb2026
+}
+
+.secondaryNav .current-menu-item {
+  background-color: #333
+}
+
+.sectionNavTitle {
+  background-color: #900;
+  border-bottom: 1px solid #fff
+}
+
+.redButton, .submit {
+  display: inline-block;
+  background-color: #cb2026;
+  border: 1px solid #900;
+  color: #fff !important;
+  padding: .5em;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  text-decoration: none;
+  float: right;
+}
+
+.redButton:hover, .submit:hover {
+  background-color: #fff;
+  color: #cb2026 !important;
+  cursor: pointer
 }
 
 .desktopMenu {

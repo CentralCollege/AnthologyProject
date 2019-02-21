@@ -83,13 +83,13 @@
         <div class="container">
           <div class="twelve columns">
             <h1>The Writing Anthology</h1>
-						<h3>A Publication of the English Department and the Art Department</h3>
+						<h3 style="background-color:transparent;">A Publication of the English Department and the Art Department</h3>
 						<p><a href="/writing-anthology/about/" class="button gaHero">About</a><a href="/writing-anthology/past-issues/" class="button gaHero">Past Issues</a></p>
 						<!-- <a href="" class="button gaHero">Current Issue</a> -->
         </div>
       </section>
 
-			<section class="whiteSection sectionPadding">
+			<!-- <section class="whiteSection sectionPadding">
 				<div class="container">
 					<div class="row">
 					  <div class="three columns story">
@@ -161,6 +161,69 @@
 					</div>
 					<div class="clearBoth"></div>
 					</div>
+				</div>
+			</section> -->
+			<section class="whiteSection sectionPadding container">
+				<div class="row">
+					<div class="nine columns">
+				  	<?php
+						$issuesArray = array();
+						$mostRecentIssue = 0;
+						$taxonomyTerms = get_terms( 'issue' );
+						if ($taxonomyTerms) {
+							foreach( $taxonomyTerms as $taxonomyTerm){
+								array_push($issuesArray, $taxonomyTerm->name);
+							}
+							$mostRecentIssue = max($issuesArray);
+						}
+
+						$args = array( 'past-issues' => $mostRecentIssue );
+						// The Query
+						$the_query = new WP_Query( $args );
+						// The Loop
+						if ( $the_query->have_posts() ) {
+							while ( $the_query->have_posts() ) {
+								$the_query->the_post();
+								?>
+									<div class="row">
+										<div class="twelve columns story">
+											<a href="<?php the_permalink()?>" class="articleTitle" style="text-decoration: none;"><h2><?php the_title();?></h2></a>
+											<?php
+											if ( has_post_thumbnail() ) {
+												?> <a href="<?php the_permalink()?>"><div class="three columns"><?php
+												the_post_thumbnail('thumbnail', array('class' => 'singlePostImage'));
+												?> </div></a> <?php
+											}
+											?><div class="nine columns">
+													<h4 class=""><?php
+													the_field('student_author');
+												?></h4>
+												<p class="authorsNote"><?php the_excerpt(); ?></p>
+												<a href="<?php the_permalink();?>" class="redButton">Read More</a>
+												</div>
+										</div>
+									</div>
+								<?php
+							}
+						}
+						?>
+					</div>
+					<div class="three columns">
+						<div class="secondaryNav">
+						<ul>
+							<li class="sectionNavTitle"><a href="/writing-anthology"><?php bloginfo('title');?> home</a></li>
+						</ul>
+						<?php
+						$args = array(
+							//'container_class' => 'secondaryNav',
+							'depth' => '1'
+						);
+						 wp_nav_menu( $args );?>
+					 </div>
+					</div>
+			  </div>
+				<div class="clearBoth"></div>
+				</div>
 				</div>
 			</section>
 <?php get_footer();?>
