@@ -11,6 +11,16 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   display: none;
 }
 
+.singlePostImage{
+    max-width: 400px;
+    max-height: 400px;
+    margin: 1em;
+}
+
+.studentAuthor{
+  font-size: 1.5em;
+}
+
 .desktopFooter{
   display: block;
 }
@@ -346,7 +356,8 @@ h2 {
 
 .redBackgroundHeading {
   background-color: #cb2026;
-  color: #fff
+  color: #fff;
+  padding: 1em;
 }
 
 p {
