@@ -14,10 +14,17 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .singlePostImage{
     max-width: 400px;
     max-height: 400px;
+    height: auto !important;
+    width: 100% !important;
     margin: 1em;
 }
 
+.nine.columns{
+  padding-left: .5em;
+}
+
 .studentAuthor{
+  margin-top: 4px;
   font-size: 1.5em;
 }
 
@@ -440,7 +447,8 @@ table.tableHover {
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   font-size: 1.1em;
-  text-decoration: none
+  text-decoration: none;
+  float: right;
 }
 
 .redButton:hover, .submit:hover {
@@ -474,6 +482,12 @@ a#logo {
   color: #ccc;
   background-color: #333;
 }
+/* @media (max-width:1100px) {
+
+}
+@media (max-width:1100px) {
+
+} */
 
 @media (min-width:550px) {
   nav.primary {
