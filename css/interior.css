@@ -11,6 +11,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   display: none;
 }
 
+.clearBoth{
+  margin-top: 25px;
+}
+
 .singlePostImage{
     max-width: 400px;
     max-height: 400px;
@@ -30,6 +34,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
 .desktopFooter{
   display: block;
+  margin-top: 15px;
 }
 
 footer{

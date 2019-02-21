@@ -59,9 +59,9 @@
 				}
 					?>
 				<ul class="applyGive list-group">
-					<li class="list-group-item"><a href="/admission/apply/" onclick="_gaq.push(['_trackEvent', 'Sitewide Apply', 'Click', 'Apply']);"><i class="far fa-2x fa-check-square" style="padding-right:.5em;"></i> I want to apply!</a></li>
-					<li class="list-group-item"><a href="/alumni/ways-to-give/online/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Ways To Give', 'Click', 'Ways to Give']);"><i class="fas fa-2x fa-dollar-sign" style="padding-right:.5em;"></i> Give to Central</a></li>
-					<li class="list-group-item"><a href="/event-planners/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Plan an Event', 'Click', 'Plan an Event']);"><i class="fas fa-2x fa-calendar" style="padding-right:.5em;"></i> Plan an event</a></li>
+					<li class="list-group-item"><a href="/admission/apply/" onclick="_gaq.push(['_trackEvent', 'Sitewide Apply', 'Click', 'Apply']);"><i class="far fa-1x fa-check-square" style="padding-right:.5em;"></i> I want to apply!</a></li>
+					<li class="list-group-item"><a href="/alumni/ways-to-give/online/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Ways To Give', 'Click', 'Ways to Give']);"><i class="fas fa-1x fa-dollar-sign" style="padding-right:.5em;"></i> Give to Central</a></li>
+					<li class="list-group-item"><a href="/event-planners/" onclick="_gaq.push(['_trackEvent', 'Interior Sitewide Plan an Event', 'Click', 'Plan an Event']);"><i class="fas fa-1x fa-calendar" style="padding-right:.5em;"></i> Plan an event</a></li>
 				</ul>
 			</nav>
 			<main id="panel">
@@ -165,7 +165,7 @@
 			</section> -->
 			<section class="whiteSection sectionPadding container">
 				<div class="row">
-					<div class="nine columns">
+					<div class="twelve columns">
 				  	<?php
 						$issuesArray = array();
 						$mostRecentIssue = 0;
@@ -208,7 +208,7 @@
 						}
 						?>
 					</div>
-					<div class="three columns">
+					<!-- <div class="three columns">
 						<div class="secondaryNav">
 						<ul>
 							<li class="sectionNavTitle"><a href="/writing-anthology"><?php bloginfo('title');?> home</a></li>
@@ -220,7 +220,7 @@
 						);
 						 wp_nav_menu( $args );?>
 					 </div>
-					</div>
+					</div> -->
 			  </div>
 				<div class="clearBoth"></div>
 				</div>

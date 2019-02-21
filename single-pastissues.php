@@ -72,6 +72,9 @@ get_header();
 	<div class="clearBoth"></div>
 	</div>
 	</div>
+	<div class="">
+
+	</div>
 </section>
 	<?php get_footer();?>
 	<script src="<?php echo get_stylesheet_directory_uri() ?>/js/homepage.min.js"></script>
