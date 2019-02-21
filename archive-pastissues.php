@@ -13,11 +13,11 @@ get_header();
     </div>
   </div>
 </section>
-<section class="breadcrumbs">
+<!-- <section class="breadcrumbs">
   <div class="container">
     <?php anthology_breadcrumbs() ?>
   </div>
-</section>
+</section> -->
 <section class="container sectionPaddingSmall">
   <div class="twelve columns page-content">
     <h2>Past Issues</h2>
