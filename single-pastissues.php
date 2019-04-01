@@ -24,7 +24,8 @@ get_header();
 	<div class="row">
 		<div class="nine columns">
 	  	<?php
-			$args = array( 'past-issues' => $mostRecentIssue );
+      $currentIssue = '2017'; //get_the_title();
+			$args = array( 'past-issues' => $currentIssue );
 			// The Query
 			$the_query = new WP_Query( $args );
 			// The Loop
@@ -53,6 +54,12 @@ get_header();
 					<?php
 				}
 			}
+      else {
+        ?>
+        <h2>Sorry, This page does not exist.</h2>
+        <p>or there are no posts assigned to it. Please return home and try again.</p>
+        <?php
+      }
 			?>
 		</div>
 		<div class="three columns">
