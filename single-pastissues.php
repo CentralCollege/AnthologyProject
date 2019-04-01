@@ -24,7 +24,7 @@ get_header();
 	<div class="row">
 		<div class="nine columns">
 	  	<?php
-      $currentIssue = '2017'; //get_the_title();
+      $currentIssue = get_the_title();
 			$args = array( 'past-issues' => $currentIssue );
 			// The Query
 			$the_query = new WP_Query( $args );
