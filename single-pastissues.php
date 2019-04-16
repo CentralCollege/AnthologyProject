@@ -25,7 +25,10 @@ get_header();
 		<div class="nine columns">
 	  	<?php
       $currentIssue = get_the_title();
-			$args = array( 'past-issues' => $currentIssue );
+			$args = array(
+        'past-issues' => $currentIssue,
+        'posts_per_page' => -1
+      );
 			// The Query
 			$the_query = new WP_Query( $args );
 			// The Loop
