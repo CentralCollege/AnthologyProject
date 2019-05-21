@@ -29,7 +29,7 @@ get_header();
             $count = 0;
             if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php
-              if ($count <= 3){
+              if ($count <= 500){
                 ?><a class="issueTitle buttonCenter" href="<?php the_permalink()?>">
                   <h2 class="issueTitle"><?php the_title();?></h2>
                   <?php
@@ -40,11 +40,11 @@ get_header();
                 <?php
                 $count++;
                 ?></div></a><?php
-                if ($count <= 3) {
+                if ($count <= 500) {
                   ?><div class="three columns issueListing"><?php
                 }
               }
-              elseif ($count > 3) {
+              elseif ($count > 500) {
                 $count = 0;
                 ?>
                 </div>
@@ -52,7 +52,7 @@ get_header();
                   <div class="three columns ">
                     <a href="<?php the_permalink()?>"> <?php
                       the_post_thumbnail();?>
-                    <h3 class="redBackgroundHeading"><?php the_title();?></h3>
+                    <h2 class="issueTitle"><?php the_title();?></h2>
                     <p><a href="<?php the_permalink()?>" class="button gaHero buttonCenter">View Issue</a></p>
                     <p><a target="_blank" href="<?php echo get_field( "pdf_version" ); ?>" class="button gaHero buttonCenter" download>Download PDF</a></p>
                   <?php
