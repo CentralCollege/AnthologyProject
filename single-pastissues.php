@@ -23,6 +23,7 @@ get_header();
 <section class="whiteSection sectionPadding container">
 	<div class="row">
 		<div class="nine columns">
+      <h2><?php echo get_the_title() ;?></h2>
 	  	<?php
       $currentIssue = get_the_title();
 			$args = array(
@@ -38,7 +39,7 @@ get_header();
 					?>
 						<div class="row">
 							<div class="twelve columns story">
-								<a href="<?php the_permalink()?>" class="articleTitle" style="text-decoration: none;"><h2><?php the_title();?></h2></a>
+								<a href="<?php the_permalink()?>" class="articleTitle" style="text-decoration: none;"><h3 style="font-size:1.25em;"><?php the_title();?></h3></a>
 								<?php
 								if ( has_post_thumbnail() ) {
 									?> <a href="<?php the_permalink()?>"><div class="three columns"><?php
