@@ -32,7 +32,7 @@
 		<body>
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP42LCH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<nav id="menu" style="display: none;">
-				<span class="closeNav"><i class="far fa-2x fa-window-close" aria-hidden="true"></i></span>
+				<span class="closeNav"><i class="fa fa-lg fa-window-close" aria-hidden="true"></i></span>
 				<h1><?php echo get_bloginfo('name');?></h1>
 				<ul>
 					<li class="menu-item"><a href="http://www.central.edu">Central College Homepage</a></li>
@@ -67,7 +67,7 @@
 			<main id="panel">
 			<section class="logo"><a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/2015/centralCollegeLogo.svg" alt="Central College Logo"></a></section>
 			<nav class="desktopMenu">
-				<a href="/alumni" class="menuButton "><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+				<a href="/writing-anthology" class="menuButton "><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
 				<a href="/about">About</a>
 				<a href="/admission">Admission</a>
 				<a href="/academics">Academics</a>
