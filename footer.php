@@ -22,8 +22,9 @@
 </div>
       <div class="four columns">
         <a href="/"><img src="//d1lqhpmxg10s5j.cloudfront.net/images/main/footerLogo.png" alt="Central College" width="125" height="66" class="footerLogo"></a>
-        <p class="alignCenter socialIcons"><a href="https://www.facebook.com/CentralCollege"><i class="fab fa-2x fa-facebook-square" aria-hidden="true"></i> <span class="sr-only">Central College Facebook</span></a>
-          <a href="https://twitter.com/CentralCollege"><i class="fab fa-2x fa-twitter-square" aria-hidden="true"></i> <span class="sr-only">Central College Twitter</span></a>
+        <p class="alignCenter socialIcons">
+					<a href="https://twitter.com/CentralCollege"><i class="fab fa-2x fa-twitter-square" aria-hidden="true"></i> <span class="sr-only">Central College Twitter</span></a>
+					<a href="https://www.facebook.com/CentralCollege"><i class="fab fa-2x fa-facebook-square" aria-hidden="true"></i> <span class="sr-only">Central College Facebook</span></a>
           <a href="https://instagram.com/centralcollege"><i class="fab fa-2x fa-instagram" aria-hidden="true"></i><span class="sr-only">Central College Instagram</span></a>
           <a href="http://www.youtube.com/user/centralcollegeadm"><i class="fab fa-2x fa-youtube-square" aria-hidden="true"></i> <span class="sr-only">Central College youTube</span></a></p>
         <p class="alignCenter"><a href="/policies/policy/678">Privacy Policy</a></p>
