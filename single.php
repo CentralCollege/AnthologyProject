@@ -28,18 +28,19 @@ get_header();
       <div>
         <h2><?php echo get_the_title();?></h2>
         <?php if( get_field( "student_author" ) ) {
-          ?><h5 style="float:left; align:left;">By <?php echo get_field( "student_author" );
+          ?><h5>By <?php echo get_field( "student_author" );
         } ?></h5>
         <?php if( get_field( "class_name_" ) ) {
-          ?><h5 style="float:right; align:right;"><?php echo get_field( "class_name_" );
-        } ?></h5>
+          ?><p><strong><?php echo get_field( "class_name_" );
+        } ?></strong></p>
       </div>
       <div style="clear:both;"></div>
-      <strong><p style="text-align:center;"><?php echo get_field( "authors_note" ); ?></p></strong>
+      <p><?php echo get_field( "authors_note" ); ?></p>
       <?php the_content();
       ?>
-      <?php if( get_field( "works_cited" ) ) {
-        ?><h3>Works Cited</h3> <strong><p style="text-align:left;"><?php echo get_field( "works_cited" ); ?></p></strong>
+      <?php if( get_field( "works_cited" ) ) {?>
+				<h3>Works Cited</h3>
+				<p><?php echo get_field( "works_cited" ); ?></p>
       <?php } ?>
     </div>
     <div class="three columns">
