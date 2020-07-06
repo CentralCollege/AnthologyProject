@@ -44,6 +44,7 @@ footer{
 .featuredPhotoHeader{
   margin-top: 1rem;
   width: 100%;
+	height:auto;
   overflow: hidden;
   max-height: 300px;
 }
@@ -51,8 +52,8 @@ footer{
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
   width: 100%;
   height: auto;
-  margin-top: -50%;
   overflow: hidden;
+	object-fit: fill;
 }
 
 img.issueCoverImage.wp-post-image {

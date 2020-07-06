@@ -22,7 +22,11 @@ get_header();
   <div class="nine columns page-content">
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
       <div class="twelve columns featuredPhotoHeader">
-        <?php the_post_thumbnail();?>
+        <?php
+				if ( has_post_thumbnail() ) {
+				    the_post_thumbnail('full');
+				}
+				?>
       </div>
       <div style="clear:both;"></div>
       <div>
