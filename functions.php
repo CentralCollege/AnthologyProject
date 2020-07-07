@@ -3,18 +3,20 @@
 function cui_add_styles() {
     if( is_page() || is_archive() || is_single() || is_404() ){
       wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto+Condensed:700%7CRaleway:800');
-      wp_enqueue_style( 'interior-style', get_stylesheet_directory_uri() . '/css/interior.css', '', '1.1.8' );
+      wp_enqueue_style( 'interior-style', get_stylesheet_directory_uri() . '/css/interior.css', '', '1.2.0' );
       wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/external-libraries/font-awesome/css/font-awesome.min.css', '1.1.0' );
     }
      else{
-      wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+      wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', '', '1.2.0'  );
     }
 
 }
 add_action( 'wp_enqueue_scripts', 'cui_add_styles' );
 add_theme_support( 'post-thumbnails' );
-//set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
+set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
 add_image_size( 'issue-cover', 260, 330, true );
+add_image_size( 'post-featured', 702, 300, array( 'center', 'center' ) );
+add_image_size( 'post-teaser', 250, 250, array( 'center', 'center' ) );
 
 // @ini_set( 'upload_max_size' , '6M' );
 
