@@ -24,7 +24,7 @@ get_header();
       <div class="twelve columns featuredPhotoHeader">
         <?php
 				if ( has_post_thumbnail() ) {
-				    the_post_thumbnail('full');
+				    the_post_thumbnail('post-featured');
 				}
 				?>
       </div>
