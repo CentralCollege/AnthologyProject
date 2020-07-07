@@ -334,7 +334,7 @@ h2 {
 }
 
 h2, h3, h4, h5 {
-  text-transform: uppercase;
+  text-transform: none;
   font-family: Raleway, sans-serif;
   margin: .75em 0;
   color: #cb2026
@@ -349,6 +349,7 @@ h2, h3 {
   padding-top: 1em;
   color: #ccc;
   background-color: #333;
+	text-transform: uppercase;
 }
 
 .secondaryNav {

@@ -89,80 +89,6 @@
         </div>
       </section>
 
-			<!-- <section class="whiteSection sectionPadding">
-				<div class="container">
-					<div class="row">
-					  <div class="three columns story">
-					    <?php
-							$issuesArray = array();
-							$mostRecentIssue = 0;
-							$taxonomyTerms = get_terms( 'issue' );
-			        if ($taxonomyTerms) {
-								foreach( $taxonomyTerms as $taxonomyTerm){
-									array_push($issuesArray, $taxonomyTerm->name);
-								}
-			        	$mostRecentIssue = max($issuesArray);
-			        }
-
-							$count = 0;
-							$args = array( 'past-issues' => $mostRecentIssue );
-							// The Query
-							$the_query = new WP_Query( $args );
-							// The Loop
-							if ( $the_query->have_posts() ) {
-								while ( $the_query->have_posts() ) {
-									$the_query->the_post();
-									if ($count <= 3){
-										?><a href="<?php the_permalink()?>"> <?php
-										if ( has_post_thumbnail() ) {
-											the_post_thumbnail();
-										}
-										?>
-										<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
-										<?php
-										$count++;
-										//the_excerpt();
-										the_field('student_author');
-										$title = the_title('','',false);
-										$eventID = get_post_meta($post->ID, 'eventID', true);
-										$urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-										?></div></a><?php
-										if ($count <= 3) {
-											?><div class="three columns story"><?php
-										}
-									}
-									elseif ($count > 3) {
-										$count = 0;
-										?>
-										</div>
-										<div class="row">
-											<div class="three columns story">
-												<a href="<?php the_permalink()?>"> <?php
-												if ( has_post_thumbnail() ) {
-													the_post_thumbnail();
-												} ?>
-												<h3 class="redBackgroundHeading"><?php the_title(); ?></h3>
-											<?php
-											$count++;
-											the_field('student_author');
-											$title = the_title('','',false);
-											$eventID = get_post_meta($post->ID, 'eventID', true);
-											$urlOverride = get_post_meta($post->ID, 'urlOverride', true);
-											?></div></a><?php
-											if ($count <= 2) {
-												?><div class="three columns story"><?php
-											}
-									}
-								}
-							} else {
-								// no posts found
-							}
-						?>
-					</div>
-					<div class="clearBoth"></div>
-					</div>
-				</div>
-			</section> -->
 			<section class="whiteSection sectionPadding container">
 				<div class="row">
 					<div class="twelve columns">
@@ -191,16 +117,15 @@
 											<?php
 											if ( has_post_thumbnail() ) {
 												?> <a href="<?php the_permalink()?>"><div class="three columns"><?php
-												the_post_thumbnail('thumbnail', array('class' => 'singlePostImage'));
+												the_post_thumbnail('post-teaser', array('class' => 'singlePostImage'));
 												?> </div></a> <?php
 											}
-											?><div class="nine columns">
-													<h4 class=""><?php
-													the_field('student_author');
-												?></h4>
+											?>
+											<div class="nine columns">
+												<h4><?php the_field('student_author'); ?></h4>
 												<p class="authorsNote"><?php the_excerpt(); ?></p>
 												<a href="<?php the_permalink();?>" class="redButton">Read More</a>
-												</div>
+											</div>
 										</div>
 									</div>
 								<?php
