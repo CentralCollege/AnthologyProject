@@ -45,8 +45,9 @@ footer{
   margin-top: 1rem;
   width: 100%;
 	height:auto;
+	max-height: 300px;
   overflow: hidden;
-  max-height: 300px;
+	object-fit: fill;
 }
 
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
@@ -68,6 +69,8 @@ img.issueCoverImage.wp-post-image {
   color: #cb2026;
   font-family: sans-serif;
   text-align: center;
+	margin-bottom:5px;
+	font-weight:bold;
 
 }
 
@@ -335,7 +338,7 @@ html {
 }
 
 h1, h2, h3, h4, h5 {
-  text-transform: uppercase;
+  text-transform: none;
   font-family: Raleway, sans-serif;
   margin: .75em 0;
   color: #cb2026
@@ -347,6 +350,7 @@ h1, h2, h3 {
 }
 
 h1 {
+	text-transform: uppercase;
   font-size: 2em;
   color: #cb2026;
   text-align: center
