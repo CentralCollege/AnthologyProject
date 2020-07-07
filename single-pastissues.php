@@ -23,7 +23,7 @@ get_header();
 <section class="whiteSection sectionPadding container">
 	<div class="row">
 		<div class="nine columns">
-      <h2><?php echo get_the_title() ;?></h2>
+      <h2><?php echo get_the_title() ;?> Edition</h2>
 	  	<?php
       $currentIssue = get_the_title();
 			$args = array(
@@ -43,7 +43,7 @@ get_header();
 								<?php
 								if ( has_post_thumbnail() ) {
 									?> <a href="<?php the_permalink()?>"><div class="three columns"><?php
-									the_post_thumbnail('thumbnail', array('class' => 'singlePostImage'));
+									the_post_thumbnail('post-teaser', array('class' => 'singlePostImage'));
 									?> </div></a> <?php
 								}
 								?><div class="nine columns">
